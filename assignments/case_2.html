@@ -8,9 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1881f70793.js" crossorigin="anonymous"></script>
   <style>
       *{
           font-family: 'Poppins', sans-serif;
+          text-decoration: none;
+          list-style: none;
       }
 
     header{
@@ -36,8 +39,24 @@
 
     header>nav>ul>li{
       display: inline-block;
-      padding: 10px;
+      padding: 10px;;
     }
+
+    div:first-of-type{
+        position: fixed;
+        background: #E64848;
+        width: 200px;
+        height: 100%;
+        top: 64px;
+    }
+
+      div:first-of-type>ul{
+         padding-left: 20px;
+         padding-top: 35px;
+         left: 20px;
+         margin: 0;
+      }
+
   </style>
 </head>
 
@@ -47,11 +66,40 @@
     <nav>
       <ul>
         <li>Home</li>
-        <li>Blog</li>
-        <li>Contact</li>
-        <li>About</li>
+        <li>Services</li>
+        <li>Contacts</li>
+        <li>About Us</li>
       </ul>
     </nav>
   </header>
+
+  <div>
+      <ul>
+          <li>
+              <a href="#">
+                  <i class="fa-solid fa-house"></i>
+                  <span>Home</span>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <i class="fa-solid fa-bell-concierge"></i>
+                  <span>Services</span>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <i class="fa-solid fa-address-card"></i>
+                  <span>Contacts</span>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <i class="fa-solid fa-building"></i>
+                  <span>About Us</span>
+              </a>
+          </li>
+      </ul>
+  </div>
 </body>
 </html>
