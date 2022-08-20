@@ -5,31 +5,45 @@
     <title>CSS case 2</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
   <style>
+      *{
+          font-family: 'Poppins', sans-serif;
+      }
+
     header{
-      background-color: antiquewhite;
-      height: 40px;
-      width: 100vw;
-      position: relative;
+        background: white;
+        box-shadow: 0px -1px 8px 2px #1c1717e8;
+        position: relative;
+        height: 64px;
     }
 
     header>nav{
       position: absolute;
+      top: 0;
+      right: 20px;
+    }
+
+    header > img {
+        position: relative;
+        width: 166px;
+        height: 59px;
+        top: 4px;
+        left: 20px;
     }
 
     header>nav>ul>li{
       display: inline-block;
-      top: 0;
-      right: 0;
-      margin: auto;
       padding: 10px;
     }
   </style>
 </head>
 
 <body>
-<main>
   <header>
+      <img src="assets/images/ijse@1x.png">
     <nav>
       <ul>
         <li>Home</li>
@@ -39,7 +53,5 @@
       </ul>
     </nav>
   </header>
-
-</main>
 </body>
 </html>
