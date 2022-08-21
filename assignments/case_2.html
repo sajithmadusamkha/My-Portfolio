@@ -16,6 +16,10 @@
           list-style: none;
       }
 
+      body{
+          min-height: 100vh;
+      }
+
     header{
         background: white;
         box-shadow: 0px -1px 8px 2px #1c1717e8;
@@ -69,7 +73,7 @@
           color: white;
       }
 
-      body>img:first-of-type{
+      body>main>img:first-of-type{
           position: absolute;
           height: 300px;
           width: 400px;
@@ -78,7 +82,7 @@
           bottom: 390px;
       }
 
-      body>img:nth-child(5){
+      body>main>img:nth-child(5){
           position: absolute;
           display: inline-block;
           height: 300px;
@@ -87,7 +91,7 @@
           bottom: 391px;
       }
 
-      body>img:last-of-type{
+      body>main>img:last-of-type{
           position: absolute;
           display: inline-block;
           height: 300px;
@@ -96,7 +100,7 @@
           bottom: 391px;
       }
 
-      body>div:nth-child(3){
+      body>main>div:nth-child(3){
           position: absolute;
           display: inline-block;
           margin-left: 227px;
@@ -109,6 +113,7 @@
 
 <body>
 <!--Nav Bar-->
+<main>
   <header>
       <img src="assets/images/ijse@1x.png">
     <nav>
@@ -172,5 +177,9 @@
 <img src="assets/images/pexels-christina-morillo-1181216.jpg">
 <img src="assets/images/pexels-josh-sorenson-1714208.jpg">
 <img src="assets/images/pexels-martin-lopez-2225617.jpg">
+</main>
+<!--<footer>
+    <h3>Developed By IJSE</h3>
+</footer>-->
 </body>
 </html>
