@@ -12,8 +12,6 @@
   <style>
       *{
           font-family: 'Poppins', sans-serif;
-          text-decoration: none;
-          list-style: none;
       }
 
       body{
@@ -64,14 +62,37 @@
     }
 
     footer{
-        height: 60px;
+        height: 30px;
         background-color: gray;
     }
 
     footer>h4{
         text-align: center;
         margin-top: 0;
-        padding-top: 20px;
+        padding-top: 7px;
+    }
+
+    main>nav>ul>li{
+        list-style: none;
+        color: white;
+        padding-top: 30px;
+    }
+
+    main>nav>ul>li>i{
+        padding-right: 5px;
+      }
+
+    main>nav>ul>li>a{
+        text-decoration: none;
+        color: white;
+    }
+
+    main>nav>ul>li:hover i{
+        color: orange;
+    }
+
+    main>nav>ul>li:hover a{
+        color: orange;
     }
 
   </style>
@@ -95,10 +116,22 @@
 <main>
     <nav>
         <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Contacts</li>
-            <li>About Us</li>
+            <li>
+                <i class="fa-solid fa-house"></i>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-bell-concierge"></i>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-phone"></i>
+                <a href="#">Contacts</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-address-card"></i>
+                <a href="#">About Us</a>
+            </li>
         </ul>
     </nav>
     <section>
