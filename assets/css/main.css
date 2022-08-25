@@ -130,3 +130,13 @@ main > section:first-child > div:nth-child(5) > a > img{
 main > section:first-child > div:nth-child(5) > a:first-child > img {
     padding-left: 0;
 }
+
+#foreground-text {
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 228px;
+    opacity: 0.03;
+    margin: 0 0 0 -46px;
+    display: flex;
+}
