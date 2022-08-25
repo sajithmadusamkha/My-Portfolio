@@ -23,7 +23,7 @@
             height: 350px;
             position: absolute;
             display: inline-block;
-            top: 37px;
+            top: 0px;
             left: 0;
             right: 0;
             bottom: 0;
@@ -32,12 +32,27 @@
             background-color: transparent;
             border: 15px solid brown;
         }
+
+        body > section > div:first-of-type > div {
+            width: 332px;
+            height: 330px;
+            position: absolute;
+            display: flex;
+            border: 10px solid red;
+            border-radius: 174px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
 <section>
     <div>
-        <div></div>
+        <div><h1>Hello</h1></div>
     </div>
 </section>
 </body>
