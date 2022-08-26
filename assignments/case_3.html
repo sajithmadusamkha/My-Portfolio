@@ -13,7 +13,7 @@
         }
 
         body > section:first-of-type {
-            position: relative;
+            position: fixed;
             width: 100vw;
             height: 100vh;
         }
@@ -48,6 +48,12 @@
             justify-content: center;
         }
 
+        body > section:nth-child(2){
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+        }
+
         body > section:nth-child(2) > div:nth-child(1){
             position: absolute;
             height: 337px;
@@ -60,14 +66,47 @@
             left: 0;
             right: 0;
             margin: auto;
+            z-index: -1;
         }
 
-        .hello {
+        #hello {
             position: absolute;
             display: inline-block;
             padding-top: 134px;
             font-size: 50px;
             padding-left: 112px;
+            margin: 0;
+        }
+
+        body > section:nth-child(3) {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            border: 1px solid black;
+            top: 767px;
+        }
+
+        body > section:nth-child(3) > div {
+            position: absolute;
+            height: 337px;
+            width: 336px;
+            background-color: aqua;
+            display: inline-block;
+            border-radius: 244px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: -1;
+        }
+
+        #welcome {
+            position: absolute;
+            display: inline-block;
+            padding-top: 134px;
+            font-size: 50px;
+            padding-left: 40px;
             margin: 0;
         }
     </style>
@@ -81,7 +120,19 @@
 
 <section>
     <div>
-        <h4 class="hello">Hello</h4>
+        <h4 id="hello">Hello</h4>
+    </div>
+</section>
+
+<section>
+    <div>
+        <h4 id="welcome">Welcome To</h4>
+    </div>
+</section>
+
+<section>
+    <div>
+        <h4 id="ijse">Institute of Software Engineering</h4>
     </div>
 </section>
 </body>
