@@ -4,10 +4,51 @@
     <meta charset="UTF-8">
     <title>Sticky Layout</title>
     <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
 
-    </style>
+        body{
+            margin: 0;
+        }
+
+        body > section:nth-child(1) {
+            position: sticky;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        body > section:nth-child(1) > div {
+            background-color: red;
+            height: 45px;
+        }
+
+        body > section:nth-child(1) > div > h4 {
+            display: inline-block;
+            color: white;
+            padding-left: 10px;
+            padding-top: 10px;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        body > section:nth-child(1) > h1 {
+            display: inline-block;
+            position: absolute;
+            left: calc(90vw/2);
+            top: calc(90vh/2);
+            font-size: 100px;
+            margin: 0;
+            }
+</style>
 </head>
 <body>
+<section>
+    <div>
+        <h4>Card 1</h4>
+    </div>
 
+    <h1>Hello</h1>
+</section>
 </body>
 </html>
