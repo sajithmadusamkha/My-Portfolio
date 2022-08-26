@@ -18,12 +18,12 @@
             height: 100vh;
         }
 
-        body > section > div:first-of-type {
+        body > section:nth-child(1) > div:first-of-type {
             width: 350px;
             height: 350px;
             position: fixed;
             display: inline-block;
-            top: 0px;
+            top: 0;
             left: 0;
             right: 0;
             bottom: 0;
@@ -33,7 +33,7 @@
             border: 15px solid brown;
         }
 
-        body > section > div:first-of-type > div {
+        body > section:nth-child(1) > div:first-of-type > div {
             width: 332px;
             height: 330px;
             position: fixed;
@@ -47,12 +47,41 @@
             margin: auto;
             justify-content: center;
         }
+
+        body > section:nth-child(2) > div:nth-child(1){
+            position: absolute;
+            height: 337px;
+            width: 336px;
+            background-color: #9c27b0;
+            display: inline-block;
+            border-radius: 244px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .hello {
+            position: absolute;
+            display: inline-block;
+            padding-top: 134px;
+            font-size: 50px;
+            padding-left: 112px;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
 <section>
     <div>
         <div></div>
+    </div>
+</section>
+
+<section>
+    <div>
+        <h4 class="hello">Hello</h4>
     </div>
 </section>
 </body>
