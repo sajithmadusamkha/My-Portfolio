@@ -92,12 +92,16 @@ main > section:first-child > div:nth-child(4) {
     display: flex;
     justify-content: center;
     padding-top: 60px;
+    position: relative;
+    z-index: 1;
 }
 
 main > section:first-child > div:nth-child(5) {
     display: flex;
+    position: relative;
     justify-content: center;
     padding-top: 60px;
+    z-index: 1;
 }
 
 main > section:first-child > div:nth-child(4) > button:nth-child(1) {
@@ -137,7 +141,7 @@ main > section:first-child > div:nth-child(5) > a:first-child > img {
     padding-left: 0;
 }
 
-#foreground-text {
+.foreground-text {
     font-family: 'Abril Fatface', cursive;
     letter-spacing: 1px;
     font-weight: 400;
@@ -145,5 +149,4 @@ main > section:first-child > div:nth-child(5) > a:first-child > img {
     opacity: 0.03;
     margin: -132px 0 0 -45px;
     display: flex;
-    z-index: -1;
 }
