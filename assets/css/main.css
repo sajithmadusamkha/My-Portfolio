@@ -7,14 +7,14 @@ header{
     background: #151515;
     position: relative;
     color: white;
-    height: 60px;
+    height: 70px;
     width: 100vw;
 }
 
 /*Header Text*/
 body > header > a > h3{
     font-family: 'Open Sans', sans-serif;
-    font-size: 28px;
+    font-size: 34px;
     font-weight: 800;
     display: inline-block;
     position: relative;
@@ -31,7 +31,7 @@ body > header > nav {
     top: 0;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 header > nav > ul {
@@ -67,7 +67,7 @@ main > section:first-child > h1 {
     letter-spacing: 1px;
     margin: 0;
     font-size: 56px;
-    padding-top: 115px;
+    padding-top: 160px;
 }
 
 main > section:first-child > h4:nth-child(2) {
@@ -97,7 +97,7 @@ main > section:first-child > div:nth-child(4) {
 main > section:first-child > div:nth-child(5) {
     display: flex;
     justify-content: center;
-    padding-top: 42px;
+    padding-top: 60px;
 }
 
 main > section:first-child > div:nth-child(4) > button:nth-child(1) {
@@ -143,7 +143,7 @@ main > section:first-child > div:nth-child(5) > a:first-child > img {
     font-weight: 400;
     font-size: 228px;
     opacity: 0.03;
-    margin: -158px 0 0 -46px;
+    margin: -132px 0 0 -45px;
     display: flex;
     z-index: -1;
 }
