@@ -47,7 +47,18 @@ header > nav > ul > li {
 
 header > nav > ul > li > a {
     text-decoration: none;
+    position: relative;
     color: white;
+}
+
+header > nav > ul > li > a:after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
 }
 
 /*Home Section Styling*/
