@@ -72,7 +72,7 @@ main > section:first-child {
     color: white;
     position: relative;
     font-family: 'Open Sans', sans-serif;
-    height: 100vh;
+    height: 82vh;
     width: 100vw;
 }
 
@@ -165,4 +165,24 @@ main > section:first-child > div:nth-child(5) > a:first-child > img {
     opacity: 0.03;
     margin: -132px 0 0 -45px;
     display: flex;
+}
+
+/*About Me*/
+main > section:nth-child(2) {
+    background-color: #151515;
+    color: white;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+main > section:nth-child(2) > h1 {
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1px;
+    font-size: 36px;
+    margin: 0;
+    padding-top: 63px;
 }
