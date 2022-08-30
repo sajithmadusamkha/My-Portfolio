@@ -204,3 +204,23 @@ main > section:nth-child(2) > h1 {
     right: 60px;
     margin-top: -21px;
 }
+
+main > section:nth-child(2) > p:nth-child(4) {
+    position: absolute;
+    margin: 0;
+    padding-top: 116px;
+    left: 60px;
+    right: 810px;
+    font-size: 24px;
+    display: inline-block;
+}
+
+main > section:nth-child(2) > p:nth-child(5) {
+    position: absolute;
+    display: inline-block;
+    top: 382px;
+    margin: 0;
+    left: 60px;
+    right: 810px;
+    font-size: 24px;
+}
