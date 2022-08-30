@@ -5,7 +5,9 @@
 /*Header*/
 header{
     background: #151515;
-    position: relative;
+    position: fixed;
+    z-index: 1;
+    top: 0;
     color: white;
     height: 70px;
     width: 100vw;
