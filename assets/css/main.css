@@ -208,7 +208,7 @@ main > section:nth-child(2) > h1 {
 main > section:nth-child(2) > p:nth-child(4) {
     position: absolute;
     margin: 0;
-    padding-top: 116px;
+    padding-top: 170px;
     left: 60px;
     right: 810px;
     font-size: 22px;
@@ -218,7 +218,7 @@ main > section:nth-child(2) > p:nth-child(4) {
 main > section:nth-child(2) > p:nth-child(5) {
     position: absolute;
     display: inline-block;
-    top: 342px;
+    top: 400px;
     margin: 0;
     left: 60px;
     right: 810px;
@@ -236,6 +236,17 @@ main > section:nth-child(2) > button {
     font-weight: 600;
     font-size: 20px;
     left: 60px;
-    top: 462px;
+    top: 520px;
     border: none;
+}
+
+main > section:nth-child(2) > img {
+    position: absolute;
+    display: inline-block;
+    width: 225px;
+    height: 415px;
+    right: 60px;
+    top: 192px;
+    border: 2px solid white;
+    border-radius: 12px;
 }
