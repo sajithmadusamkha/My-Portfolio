@@ -311,7 +311,6 @@ main section:nth-child(3) > h1 {
 .education-flow {
     position: absolute;
     display: inline-block;
-    border: 1px solid white;
     width: 500px;;
     height: 468px;
     top: 76px;
@@ -319,6 +318,7 @@ main section:nth-child(3) > h1 {
     bottom: 0;
     right: 0;
     margin: auto;
+    z-index: 1;
 }
 
 .education-flow > div:nth-child(1) {
@@ -449,4 +449,16 @@ main section:nth-child(3) > h1 {
     margin: auto;
     top: 424px;
     left: 167px;
+}
+
+#education > h4:nth-child(5) {
+    font-family: 'Abril Fatface', cursive;
+    position: absolute;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 228px;
+    opacity: 0.03;
+    top: 578px;
+    margin: -132px 0 0 -50px;
+    display: inline-block;
 }
