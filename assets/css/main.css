@@ -290,7 +290,7 @@ main section:nth-child(3) > h1 {
     padding-top: 63px;
 }
 
-#education div:nth-child(2) {
+#education > div:nth-child(2) {
     position: absolute;
     display: inline-block;
     border-bottom: 2px solid white;
@@ -299,11 +299,32 @@ main section:nth-child(3) > h1 {
     left: 60px;
 }
 
-#education div:nth-child(3) {
+#education > div:nth-child(3) {
     position: absolute;
     display: inline-block;
     border-bottom: 2px solid white;
     top: 84px;
     width: 637px;
     right: 60px;
+}
+
+.education-flow {
+    position: absolute;
+    display: inline-block;
+    border: 1px solid white;
+    width: 490px;
+    height: 460px;
+    top: 76px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.education-flow > div:nth-child(1) {
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
 }
