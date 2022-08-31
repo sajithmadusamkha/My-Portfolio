@@ -352,3 +352,11 @@ main section:nth-child(3) > h1 {
     top: 390px;
     left: 146px;
 }
+
+.education-flow > div:nth-child(4) {
+    position: absolute;
+    display: inline-block;
+    border-left: 2px solid white;
+    height: 100%;
+    left: 150px;
+}
