@@ -360,3 +360,13 @@ main section:nth-child(3) > h1 {
     height: 100%;
     left: 150px;
 }
+
+.education-flow > h4:nth-child(5) {
+    position: absolute;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 15px;
+    top: 12px;
+    margin: 0;
+    left: 45px;
+}
