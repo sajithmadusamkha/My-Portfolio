@@ -44,7 +44,7 @@ header > nav > ul {
 
 header > nav > ul > li {
     display: inline-block;
-    padding: 10px;
+    padding: 14px 0 0 32px;
 }
 
 header > nav > ul > li > a {
@@ -288,4 +288,22 @@ main section:nth-child(3) > h1 {
     justify-content: center;
     margin: auto;
     padding-top: 63px;
+}
+
+#education div:nth-child(2) {
+    position: absolute;
+    display: inline-block;
+    border-bottom: 2px solid white;
+    top: 84px;
+    width: 637px;
+    left: 60px;
+}
+
+#education div:nth-child(3) {
+    position: absolute;
+    display: inline-block;
+    border-bottom: 2px solid white;
+    top: 84px;
+    width: 637px;
+    right: 60px;
 }
