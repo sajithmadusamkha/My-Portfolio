@@ -6,7 +6,7 @@
 header{
     background: #151515;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     color: white;
     height: 70px;
@@ -67,6 +67,7 @@ header > nav > ul > li > a:after {
 header > nav > ul > li > a:hover:after {
     width: 100%;
 }
+
 
 /*Home Section Styling*/
 main > section:first-child {
@@ -169,6 +170,7 @@ main > section:first-child > div:nth-child(5) > a:first-child > img {
     display: flex;
 }
 
+
 /*About Me*/
 main > section:nth-child(2) {
     background-color: #151515;
@@ -225,6 +227,7 @@ main > section:nth-child(2) > p:nth-child(5) {
     left: 60px;
     right: 836px;
     font-size: 22px;
+    z-index: 1;
 }
 
 main > section:nth-child(2) > button {
@@ -240,6 +243,7 @@ main > section:nth-child(2) > button {
     left: 60px;
     top: 520px;
     border: none;
+    z-index: 1;
 }
 
 main > section:nth-child(2) > img {
@@ -263,4 +267,25 @@ main > section:nth-child(2) > h4 {
     top: 578px;
     margin: -132px 0 0 -54px;
     display: inline-block;
+}
+
+
+/*Education*/
+main section:nth-child(3) {
+    background-color: #151515;
+    color: white;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+main section:nth-child(3) > h1 {
+    font-weight: 800;
+    display: flex;
+    letter-spacing: 1px;
+    font-size: 36px;
+    justify-content: center;
+    margin: auto;
+    padding-top: 63px;
 }
