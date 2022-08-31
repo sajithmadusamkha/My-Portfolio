@@ -327,4 +327,28 @@ main section:nth-child(3) > h1 {
     width: 10px;
     height: 10px;
     background-color: white;
+    border-radius: 100%;
+    left: 146px;
+}
+
+.education-flow > div:nth-child(2) {
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 100%;
+    top: 208px;
+    left: 146px;
+}
+
+.education-flow > div:nth-child(3) {
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 100%;
+    top: 390px;
+    left: 146px;
 }
