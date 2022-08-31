@@ -462,3 +462,42 @@ main section:nth-child(3) > h1 {
     margin: -132px 0 0 -50px;
     display: inline-block;
 }
+
+
+/*My Skills*/
+#skills {
+    background-color: #151515;
+    color: white;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+#skills > h1:nth-child(1) {
+    font-weight: 800;
+    display: flex;
+    letter-spacing: 1px;
+    font-size: 36px;
+    justify-content: center;
+    margin: auto;
+    padding-top: 63px;
+}
+
+#skills > div:nth-child(2) {
+    position: absolute;
+    display: inline-block;
+    border-bottom: 2px solid white;
+    top: 84px;
+    width: 647px;
+    left: 60px;
+}
+
+#skills > div:nth-child(3) {
+    position: absolute;
+    display: inline-block;
+    border-bottom: 2px solid white;
+    top: 84px;
+    width: 647px;
+    right: 60px;
+}
