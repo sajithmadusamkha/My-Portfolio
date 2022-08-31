@@ -312,7 +312,7 @@ main section:nth-child(3) > h1 {
     position: absolute;
     display: inline-block;
     border: 1px solid white;
-    width: 490px;
+    width: 500px;;
     height: 460px;
     top: 76px;
     left: 0;
@@ -367,6 +367,36 @@ main section:nth-child(3) > h1 {
     font-weight: 400;
     font-size: 15px;
     top: 12px;
+    margin: 0;
+    left: 45px;
+}
+
+.education-flow > h3:nth-child(6) {
+    position: absolute;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 21px;
+    margin: auto;
+    top: 7px;
+    left: 167px;
+}
+
+.education-flow > h4:nth-child(7) {
+    position: absolute;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 18px;
+    margin: auto;
+    top: 34px;
+    left: 167px;
+}
+
+.education-flow > h4:nth-child(8) {
+    position: absolute;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 15px;
+    top: 218px;
     margin: 0;
     left: 45px;
 }
