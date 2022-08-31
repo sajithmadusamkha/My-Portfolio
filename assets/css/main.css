@@ -313,7 +313,7 @@ main section:nth-child(3) > h1 {
     display: inline-block;
     border: 1px solid white;
     width: 500px;;
-    height: 460px;
+    height: 468px;
     top: 76px;
     left: 0;
     bottom: 0;
@@ -399,4 +399,54 @@ main section:nth-child(3) > h1 {
     top: 218px;
     margin: 0;
     left: 45px;
+}
+
+.education-flow > h3:nth-child(9) {
+    position: absolute;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 21px;
+    margin: auto;
+    top: 213px;
+    left: 167px;
+}
+
+.education-flow > h4:nth-child(10) {
+    position: absolute;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 18px;
+    margin: auto;
+    top: 240px;
+    left: 167px;
+}
+
+.education-flow > h4:nth-child(11) {
+    position: absolute;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 15px;
+    top: 400px;
+    margin: 0;
+    left: 26px;
+}
+
+.education-flow > h3:nth-child(12) {
+    position: absolute;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 21px;
+    margin: auto;
+    top: 396px;
+    left: 167px;
+}
+
+.education-flow > h4:nth-child(13) {
+    position: absolute;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 18px;
+    margin: auto;
+    top: 424px;
+    left: 167px;
 }
