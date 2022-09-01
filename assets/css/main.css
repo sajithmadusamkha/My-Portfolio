@@ -507,7 +507,8 @@ main section:nth-child(3) > h1 {
     display: flex;
     border: 1px solid white;
     width: 1141px;
-    height: 80px;
+    height: 115px;
+    justify-content: space-between;
 }
 
 .programing-languages > div {
