@@ -679,14 +679,20 @@ main > section:nth-child(2) > h4 {
 }
 
 .service-content {
-    border: 1px solid white;
     position: absolute;
     display: flex;
     width: 1156px;
     height: 330px;
-    justify-content: center;
+    justify-content: space-between;
     margin: auto;
     top: 290px;
     left: 0;
     right: 0;
+}
+
+.service-content > div {
+    width: 330px;
+    height: 330px;
+    background-color: #2A2A2A;
+    border-radius: 12px;
 }
