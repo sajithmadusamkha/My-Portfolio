@@ -721,7 +721,7 @@ main > section:nth-child(2) > h4 {
 .service-content > div > h4 {
     position: absolute;
     display: inline-block;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     text-align: center;
     top: 228px;
