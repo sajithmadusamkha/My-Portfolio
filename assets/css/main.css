@@ -696,6 +696,7 @@ main > section:nth-child(2) > h4 {
     height: 330px;
     background-color: #2A2A2A;
     border-radius: 12px;
+    z-index: 1;
 }
 
 .service-content > div > img {
@@ -738,4 +739,16 @@ main > section:nth-child(2) > h4 {
 
 .service-content > div:nth-child(3) > h3 {
     left: 134px;
+}
+
+#services > h4:nth-child(5) {
+    font-family: 'Abril Fatface', cursive;
+    position: absolute;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 228px;
+    opacity: 0.03;
+    top: 612px;
+    margin: -132px 0 0 -57px;
+    display: inline-block;
 }
