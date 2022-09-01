@@ -718,6 +718,16 @@ main > section:nth-child(2) > h4 {
     margin: 0;
 }
 
+.service-content > div > h4 {
+    position: absolute;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    top: 228px;
+    margin: 0;
+}
+
 .service-content > div:nth-child(1) > h3 {
     left: 56px;
 }
