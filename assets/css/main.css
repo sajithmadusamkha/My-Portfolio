@@ -696,3 +696,10 @@ main > section:nth-child(2) > h4 {
     background-color: #2A2A2A;
     border-radius: 12px;
 }
+
+.service-content > div > div > img {
+    position: absolute;
+    display: inline-block;
+    width: 93px;
+    height: 104px;
+}
