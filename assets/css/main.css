@@ -677,3 +677,16 @@ main > section:nth-child(2) > h4 {
     right: 60px;
     margin-top: -21px;
 }
+
+.service-content {
+    border: 1px solid white;
+    position: absolute;
+    display: flex;
+    width: 1156px;
+    height: 330px;
+    justify-content: center;
+    margin: auto;
+    top: 290px;
+    left: 0;
+    right: 0;
+}
