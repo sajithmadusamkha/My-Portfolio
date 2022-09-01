@@ -691,15 +691,20 @@ main > section:nth-child(2) > h4 {
 }
 
 .service-content > div {
+    position: relative;
     width: 330px;
     height: 330px;
     background-color: #2A2A2A;
     border-radius: 12px;
 }
 
-.service-content > div > div > img {
+.service-content > div > img {
     position: absolute;
     display: inline-block;
     width: 93px;
     height: 104px;
+    top: 62px;
+    margin: auto;
+    left: 0;
+    right: 0;
 }
