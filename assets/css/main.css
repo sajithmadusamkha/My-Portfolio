@@ -717,3 +717,15 @@ main > section:nth-child(2) > h4 {
     top: 183px;
     margin: 0;
 }
+
+.service-content > div:nth-child(1) > h3 {
+    left: 56px;
+}
+
+.service-content > div:nth-child(2) > h3 {
+    left: 99px;
+}
+
+.service-content > div:nth-child(3) > h3 {
+    left: 134px;
+}
