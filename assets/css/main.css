@@ -708,3 +708,12 @@ main > section:nth-child(2) > h4 {
     left: 0;
     right: 0;
 }
+
+.service-content > div > h3 {
+    position: absolute;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 800;
+    top: 183px;
+    margin: 0;
+}
