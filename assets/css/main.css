@@ -69,16 +69,30 @@ header > nav > ul > li > a:hover:after {
 }
 
 
-/*Home Section Styling*/
-main > section:first-child {
+/*Section Style*/
+section {
     background-color: #151515;
     color: white;
     position: relative;
     font-family: 'Open Sans', sans-serif;
-    height: 92vh;
+    height: 100vh;
     width: 100vw;
 }
 
+
+/*Section Title Style*/
+.section-title {
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1px;
+    font-size: 36px;
+    margin: 0;
+    padding-top: 63px;
+}
+
+
+/*Home Section Styling*/
 main > section:first-child > h1 {
     font-weight: 800;
     display: flex;
@@ -86,7 +100,7 @@ main > section:first-child > h1 {
     letter-spacing: 1px;
     margin: 0;
     font-size: 56px;
-    padding-top: 140px;
+    padding-top: 208px;
 }
 
 main > section:first-child > h4:nth-child(2) {
@@ -172,25 +186,6 @@ main > section:first-child > div:nth-child(5) > a:first-child > img {
 
 
 /*About Me*/
-main > section:nth-child(2) {
-    background-color: #151515;
-    color: white;
-    position: relative;
-    font-family: 'Open Sans', sans-serif;
-    height: 100vh;
-    width: 100vw;
-}
-
-main > section:nth-child(2) > h1 {
-    font-weight: 800;
-    display: flex;
-    justify-content: center;
-    letter-spacing: 1px;
-    font-size: 36px;
-    margin: 0;
-    padding-top: 63px;
-}
-
 .line-one {
     position: absolute;
     display: inline-block;
@@ -271,25 +266,6 @@ main > section:nth-child(2) > h4 {
 
 
 /*Education*/
-main section:nth-child(3) {
-    background-color: #151515;
-    color: white;
-    position: relative;
-    font-family: 'Open Sans', sans-serif;
-    height: 100vh;
-    width: 100vw;
-}
-
-main section:nth-child(3) > h1 {
-    font-weight: 800;
-    display: flex;
-    letter-spacing: 1px;
-    font-size: 36px;
-    justify-content: center;
-    margin: auto;
-    padding-top: 63px;
-}
-
 #education > div:nth-child(2) {
     position: absolute;
     display: inline-block;
@@ -465,25 +441,6 @@ main section:nth-child(3) > h1 {
 
 
 /*My Skills*/
-#skills {
-    background-color: #151515;
-    color: white;
-    position: relative;
-    font-family: 'Open Sans', sans-serif;
-    height: 100vh;
-    width: 100vw;
-}
-
-#skills > h1:nth-child(1) {
-    font-weight: 800;
-    display: flex;
-    letter-spacing: 1px;
-    font-size: 36px;
-    justify-content: center;
-    margin: auto;
-    padding-top: 63px;
-}
-
 #skills > div:nth-child(2) {
     position: absolute;
     display: inline-block;
@@ -669,4 +626,15 @@ main section:nth-child(3) > h1 {
     top: 612px;
     margin: -132px 0 0 -57px;
     display: inline-block;
+}
+
+/*Latest Projects*/
+#latest-projects > h1:nth-child(1) {
+    font-weight: 800;
+    display: flex;
+    letter-spacing: 1px;
+    font-size: 36px;
+    justify-content: center;
+    margin: auto;
+    padding-top: 63px;
 }
