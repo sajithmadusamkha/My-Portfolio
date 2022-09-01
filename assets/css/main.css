@@ -505,7 +505,10 @@ main section:nth-child(3) > h1 {
 .programing-languages{
     position: absolute;
     display: flex;
-    border: 1px solid white;
+    left: 0;
+    right: 0;
+    top: 265px;
+    margin: auto;
     width: 1141px;
     height: 115px;
     justify-content: space-between;
@@ -528,4 +531,12 @@ main section:nth-child(3) > h1 {
     left: 0;
     right: 0;
     margin: auto;
+}
+
+.language-title {
+    width: 1141px;
+    height: 30px;
+    margin: auto;
+    position: absolute;
+    display: flex;
 }
