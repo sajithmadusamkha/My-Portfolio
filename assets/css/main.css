@@ -587,6 +587,7 @@ main section:nth-child(3) > h1 {
     left: 0;
     right: 0;
     top: 550px;
+    z-index: 1;
     margin: auto;
     width: 530px;
     height: 115px;
@@ -623,6 +624,7 @@ main section:nth-child(3) > h1 {
     height: 30px;
     left: 531px;
     top: 640px;
+    z-index: 1;
     margin: auto;
     position: absolute;
     display: flex;
@@ -655,4 +657,16 @@ main section:nth-child(3) > h1 {
 
 #skills > h3:nth-child(5){
     top: 365px;
+}
+
+#skills > h4:nth-child(10) {
+    font-family: 'Abril Fatface', cursive;
+    position: absolute;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 228px;
+    opacity: 0.03;
+    top: 612px;
+    margin: -132px 0 0 -57px;
+    display: inline-block;
 }
