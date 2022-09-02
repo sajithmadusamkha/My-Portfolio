@@ -714,6 +714,22 @@ main > section:nth-child(2) > h4 {
     font-weight: 800;
 }
 
+.card-content .card-button {
+    width: 138px;
+    height: 36px;
+    border-radius: 20px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    top: 382px;
+    border: none;
+    right: 0;
+    background-color: #6600CE;
+}
+
 
 /*Services*/
 #services > div:nth-child(2){
