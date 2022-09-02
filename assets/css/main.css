@@ -893,3 +893,22 @@ main > section:nth-child(2) > h4 {
     margin: -132px 0 0 -57px;
     display: inline-block;
 }
+
+/*Contact Section*/
+#contacts > div:nth-child(2){
+    position: absolute;
+    display: inline-block;
+    border-bottom: 2px solid white;
+    width: 648px;
+    left: 60px;
+    margin-top: -21px;
+}
+
+#contacts > div:nth-child(3){
+    position: absolute;
+    display: inline-block;
+    border-bottom: 2px solid white;
+    width: 648px;
+    right: 60px;
+    margin-top: -21px;
+}
