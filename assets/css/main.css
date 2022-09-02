@@ -671,6 +671,7 @@ main > section:nth-child(2) > h4 {
     display: flex;
     justify-content: space-around;
     top: 112px;
+    z-index: 1;
 }
 
 #latest-projects .card .card-content {
@@ -773,7 +774,7 @@ main > section:nth-child(2) > h4 {
     margin: auto;
     left: 0;
     right: 0;
-    top: 490px;
+    top: 505px;
 }
 
 .pagination > div {
@@ -785,6 +786,18 @@ main > section:nth-child(2) > h4 {
 
 .pagination > div:nth-child(2){
     background-color: #6600CE;
+}
+
+#latest-projects > h4:nth-child(5) {
+    font-family: 'Abril Fatface', cursive;
+    position: absolute;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 228px;
+    opacity: 0.03;
+    top: 612px;
+    margin: -132px 0 0 -57px;
+    display: inline-block;
 }
 
 /*Services*/
