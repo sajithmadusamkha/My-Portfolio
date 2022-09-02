@@ -661,6 +661,10 @@ main > section:nth-child(2) > h4 {
     margin-top: -21px;
 }
 
+#latest-projects .card .card-content {
+    position: relative;
+}
+
 #latest-projects .card .card-image {
     position: relative;
     border-radius: 12px;
@@ -685,6 +689,29 @@ main > section:nth-child(2) > h4 {
     height: 440px;
     background-color: #2A2A2A;
     border-radius: 12px;
+}
+
+.name-description {
+    width: 290px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 264px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.name-description .description {
+    padding-top: 25px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.name-description .name {
+    font-size: 18px;
+    font-weight: 800;
 }
 
 
