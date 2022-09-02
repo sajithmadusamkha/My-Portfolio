@@ -661,6 +661,26 @@ main > section:nth-child(2) > h4 {
     margin-top: -21px;
 }
 
+#latest-projects .card .card-image {
+    position: relative;
+    border: 1px solid white;
+    border-radius: 12px;
+    background: linear-gradient(90deg, hsla(328, 75%, 45%, 1) 0%, hsla(269, 85%, 41%, 1) 70%);
+    height: 229px;
+    width: 330px;
+}
+
+#latest-projects .card .card-image img {
+    position: absolute;
+    width: 286px;
+    height: 206px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
 
 /*Services*/
 #services > div:nth-child(2){
