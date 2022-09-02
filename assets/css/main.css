@@ -661,6 +661,13 @@ main > section:nth-child(2) > h4 {
     margin-top: -21px;
 }
 
+#latest-projects .main-cards {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    top: 112px;
+}
+
 #latest-projects .card .card-content {
     position: relative;
 }
@@ -704,14 +711,16 @@ main > section:nth-child(2) > h4 {
 }
 
 .name-description .description {
-    padding-top: 25px;
     font-weight: 600;
+    padding-top: 32px;
+    margin: 0;
     font-size: 14px;
 }
 
 .name-description .name {
     font-size: 18px;
     font-weight: 800;
+    margin: 0;
 }
 
 .card-content .card-button {
