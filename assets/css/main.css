@@ -662,7 +662,12 @@ main > section:nth-child(2) > h4 {
 }
 
 #latest-projects .main-cards {
+    width: 1195px;
+    height: 504px;
     position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
     display: flex;
     justify-content: space-around;
     top: 112px;
@@ -739,6 +744,48 @@ main > section:nth-child(2) > h4 {
     background-color: #6600CE;
 }
 
+.left-arrow {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 2px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+.right-arrow {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 2px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+.pagination {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 155px;
+    height: 10px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 490px;
+}
+
+.pagination > div {
+    width: 45px;
+    height: 10px;
+    background-color: #E3C8FF;
+    border-radius: 10px;
+}
+
+.pagination > div:nth-child(2){
+    background-color: #6600CE;
+}
 
 /*Services*/
 #services > div:nth-child(2){
