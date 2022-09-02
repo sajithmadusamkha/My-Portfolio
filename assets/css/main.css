@@ -916,13 +916,14 @@ main > section:nth-child(2) > h4 {
 #contacts > form {
     position: absolute;
     display: flex;
-    width: 1156px;
+    width: 910px;
     flex-direction: column;
     height: 534px;
     margin: auto;
     padding-top: 10px;
-    left: 60px;
-    top: 200px;
+    right: 0;
+    left: 0;
+    top: 175px;
 }
 
 #contacts > form > input[type=email] , input[type=text] {
@@ -934,6 +935,7 @@ main > section:nth-child(2) > h4 {
     font-weight: 400;
     margin-top: 10px;
     background-color: #2A2A2A;
+    color: white;
 }
 
 #contacts > form > input::placeholder, textarea::placeholder {
@@ -951,14 +953,24 @@ main > section:nth-child(2) > h4 {
     border: 2px solid white;
     border-radius: 12px;
     resize: vertical;
+    color: white;
+    margin-top: 10px;
 }
 
 #contacts > form > input[type=submit]{
     width: 190px;
     position: relative;
-    height: 50px;
+    height: 40px;
     border: none;
     border-radius: 28px;
-    margin-top: 28px;
+    margin-top: 30px;
     align-self: flex-end;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: #6600CE;
+}
+
+#contacts > form > label {
+    margin-top: 20px;
 }
