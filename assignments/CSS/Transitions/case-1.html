@@ -13,26 +13,52 @@
         }
 
         section > div {
-            width: 100%;
-            height: 50px;
+            width: 25%;
+            height: 40px;
             border: 2px solid red;
             margin-top: 20px;
             font-size: 20px;
             color: black;
         }
 
-        section>div>i {
+        section > div:hover {
+            background: plum;
+            width: 300px;
+            transition-property: width;
+            transition-duration: 2s;
+        }
+
+        section > div > i {
             margin-right: 10px;
         }
+
     </style>
 </head>
 <body>
 <section>
-    <div><i class="fa-solid fa-truck-medical"></i>Menu One</div>
-    <div><i class="fa-solid fa-address-book"></i>Menu Two</div>
-    <div><i class="fa-solid fa-book-atlas"></i>Menu Three</div>
-    <div><i class="fa-solid fa-layer-group"></i>Menu Four</div>
-    <div><i class="fa-solid fa-cart-arrow-down"></i>Menu Five</div>
+    <div>
+        <h1>Menu One</h1>
+        <i class="fa-solid fa-truck-medical"></i>
+    </div>
+
+    <div>
+        <h1>Menu Two</h1>
+        <i class="fa-solid fa-address-book"></i>
+    </div>
+
+    <div>
+        <h1>Menu Three</h1>
+        <i class="fa-solid fa-book-atlas"></i>
+    </div>
+
+    <div>
+        <h1>Menu Four</h1>
+        <i class="fa-solid fa-layer-group"></i>
+    </div>
+    <div>
+        <h1>Menu Five</h1>
+        <i class="fa-solid fa-cart-arrow-down"></i>
+    </div>
 </section>
 <div></div>
 <div></div>
