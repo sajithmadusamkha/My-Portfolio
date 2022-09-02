@@ -663,7 +663,6 @@ main > section:nth-child(2) > h4 {
 
 #latest-projects .card .card-image {
     position: relative;
-    border: 1px solid white;
     border-radius: 12px;
     background: linear-gradient(90deg, hsla(328, 75%, 45%, 1) 0%, hsla(269, 85%, 41%, 1) 70%);
     height: 229px;
@@ -679,6 +678,13 @@ main > section:nth-child(2) > h4 {
     right: 0;
     bottom: 0;
     top: 0;
+}
+
+.card {
+    width: 330px;
+    height: 440px;
+    background-color: #2A2A2A;
+    border-radius: 12px;
 }
 
 
