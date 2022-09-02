@@ -82,12 +82,15 @@ section {
 
 /*Section Title Style*/
 .section-title {
+    position: relative;
+    width: max-content;
+    left: 0;
+    right: 0;
     font-weight: 800;
-    display: flex;
     justify-content: center;
     letter-spacing: 1px;
     font-size: 36px;
-    margin: 0;
+    margin: auto;
     padding-top: 63px;
 }
 
