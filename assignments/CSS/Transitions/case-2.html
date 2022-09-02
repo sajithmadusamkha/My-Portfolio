@@ -7,6 +7,7 @@
     body{
       background-color: #3c3cff;
       margin: 0;
+      font-family: sans-serif;
     }
 
     div{
@@ -21,6 +22,8 @@
       margin: auto;
       border-radius: 100%;
       border: 12px solid white;
+      border-top: 12px solid crimson;
+      cursor: pointer;
     }
 
     div > h1 {
@@ -33,6 +36,11 @@
       top: 0;
       bottom: 0;
       margin: auto;
+    }
+
+    div:hover{
+      transform: rotate(360deg);
+      transition: all 2s;
     }
   </style>
 </head>
