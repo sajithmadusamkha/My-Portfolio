@@ -989,4 +989,25 @@ main > section:nth-child(2) > h4 {
 }
 
 /*Footer Section*/
+footer {
+    position: relative;
+    background-color: #2A2A2A;
+    width: 100vw;
+    height: 75px;
+}
 
+.footer-icons > a > img {
+    width: 32px;
+}
+
+.footer-icons {
+    position: absolute;
+    right: 60px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 305px;
+    height: 33px;
+    display: flex;
+    justify-content: space-between;
+}
