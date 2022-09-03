@@ -177,7 +177,7 @@ main > section:first-child > div:nth-child(5) > a:first-child > img {
     padding-left: 0;
 }
 
-#foreground-text {
+.foreground-text {
     font-family: 'Abril Fatface', cursive;
     letter-spacing: 1px;
     font-weight: 400;
