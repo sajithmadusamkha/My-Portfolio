@@ -996,8 +996,26 @@ footer {
     height: 75px;
 }
 
+footer > h4:first-child{
+    position: absolute;
+    display: inline-block;
+    font-size: 18px;
+    width: max-content;
+    height: 25px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-weight: 400;
+    left: 60px;
+    opacity: 0.5;
+    letter-spacing: 1px;
+}
+
 .footer-icons > a > img {
     width: 32px;
+    opacity: 0.5;
 }
 
 .footer-icons {
