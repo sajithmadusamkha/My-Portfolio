@@ -96,35 +96,42 @@ section {
 
 
 /*Home Section Styling*/
-main > section:first-child > h1 {
+main > section:first-child > div:nth-child(1) {
+    position: relative;
+    padding-top: 12px;
+}
+
+main > section:first-child > div:nth-child(1) > h1 {
+    position: relative;
     font-weight: 800;
-    display: flex;
-    justify-content: center;
     letter-spacing: 1px;
-    margin: 0;
+    width: max-content;
+    margin: auto;
     font-size: 56px;
     padding-top: 208px;
 }
 
-main > section:first-child > h4:nth-child(2) {
-    display: flex;
-    justify-content: center;
-    margin: 0;
+main > section:first-child > div:nth-child(1) > h4:nth-child(2) {
+    position: relative;
+    width: max-content;
+    margin: auto;
+    left: 0;
+    right: 0;
     padding-top: 38px;
     font-weight: 600;
     font-size: 22px;
 }
 
-main > section:first-child > h4:nth-child(3) {
-    display: flex;
-    justify-content: center;
-    margin: 0;
+main > section:first-child > div:nth-child(1) > h4:nth-child(3) {
+    position: relative;
+    width: max-content;
+    margin: auto;
     padding-top: 2px;
     font-weight: 600;
     font-size: 22px;
 }
 
-main > section:first-child > div:nth-child(4) {
+main > section:first-child > div:nth-child(3) {
     display: flex;
     justify-content: center;
     padding-top: 60px;
@@ -132,7 +139,7 @@ main > section:first-child > div:nth-child(4) {
     z-index: 1;
 }
 
-main > section:first-child > div:nth-child(5) {
+main > section:first-child > div:nth-child(2) {
     display: flex;
     position: relative;
     justify-content: center;
@@ -140,7 +147,7 @@ main > section:first-child > div:nth-child(5) {
     z-index: 1;
 }
 
-main > section:first-child > div:nth-child(4) > button:nth-child(1) {
+main > section:first-child > div:nth-child(2) > button:nth-child(1) {
     border: none;
     padding: 8px;
     width: 190px;
@@ -153,7 +160,7 @@ main > section:first-child > div:nth-child(4) > button:nth-child(1) {
     color: white;
 }
 
-main > section:first-child > div:nth-child(4) > button:nth-child(2) {
+main > section:first-child > div:nth-child(2) > button:nth-child(2) {
     padding: 8px;
     margin-left: 18px;
     width: 190px;
@@ -167,13 +174,13 @@ main > section:first-child > div:nth-child(4) > button:nth-child(2) {
     border: 2px solid #6600CE;
 }
 
-main > section:first-child > div:nth-child(5) > a > img{
+main > section:first-child > div:nth-child(3) > a > img{
     width: 43px;
     padding-left: 28px;
     justify-content: center;
 }
 
-main > section:first-child > div:nth-child(5) > a:first-child > img {
+main > section:first-child > div:nth-child(3) > a:first-child > img {
     padding-left: 0;
 }
 
@@ -184,7 +191,6 @@ main > section:first-child > div:nth-child(5) > a:first-child > img {
     font-size: 228px;
     opacity: 0.03;
     margin: -132px 0 0 -45px;
-    display: flex;
 }
 
 
