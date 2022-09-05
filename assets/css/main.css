@@ -204,6 +204,19 @@ main > section:first-child > div:nth-child(3) > a:first-child > img {
     margin: -132px 0 0 -45px;
 }
 
+/*Scroll Button*/
+.scroll-btn {
+    position: absolute;
+    height: 32px;
+    width: 16px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
 
 /*About Me*/
 .line-one {
