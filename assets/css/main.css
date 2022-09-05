@@ -1,6 +1,17 @@
-/*::-webkit-scrollbar {
-    display: none;
-}*/
+/*Scroll Bar*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #0c0c0c;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: #313131;
+    border-radius: 3px;
+}
 
 /*Header*/
 header{
