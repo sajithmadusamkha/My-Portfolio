@@ -217,6 +217,19 @@ main > section:first-child > div:nth-child(3) > a:first-child > img {
     border: 1px solid white;
 }
 
+.scroll-btn:before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: white;
+    animation: move-down 2s infinite;
+}
+
 
 /*About Me*/
 .line-one {
