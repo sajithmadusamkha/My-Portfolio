@@ -1172,13 +1172,6 @@ footer > h4:first-child{
     }
 
     .foreground-text {
-        position: absolute;
-        font-family: 'Abril Fatface', cursive;
-        letter-spacing: 1px;
-        font-weight: 400;
-        font-size: 228px;
-        bottom: 70px;
-        opacity: 0.03;
-        margin: -132px 0 0 -45px;
+        display: none;
     }
 }
