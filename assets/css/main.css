@@ -1086,7 +1086,8 @@ footer > h4:first-child{
 /*Responsive Design*/
 
 @media all and (max-width: 320px) {
-    header{
+
+    header {
         background: #151515;
         position: fixed;
         z-index: 2;
@@ -1235,6 +1236,66 @@ footer > h4:first-child{
     }
 
     main > section:nth-child(2) > h4 {
+        display: none;
+    }
+
+    /*Education*/
+    #education > div:nth-child(2) {
+        display: none;
+    }
+
+    #education > div:nth-child(3) {
+        display: none;
+    }
+
+    .education-flow {
+        position: absolute;
+        left: -50px;
+        margin: auto;
+        height: 486px;
+        top: 138px;
+        width: 287px;
+    }
+
+    .education-flow > h3:nth-child(6) {
+        width: 137px;
+        font-size: 16px;
+    }
+
+    .education-flow > h4:nth-child(7) {
+        width: 137px;
+        font-size: 14px;
+        top: 45px;
+    }
+
+    .education-flow > h4:nth-child(8) {
+        width: 137px;
+        font-size: 16px;
+    }
+
+    .education-flow > h3:nth-child(9) {
+        width: 137px;
+        font-size: 14px;
+    }
+
+    .education-flow > h4:nth-child(10) {
+        font-size: 14px;
+        width: 137px;
+        top: 247px;
+    }
+
+    .education-flow > h3:nth-child(12) {
+        width: 137px;
+        font-size: 14px;
+    }
+
+    .education-flow > h4:nth-child(13) {
+        width: 137px;
+        font-size: 14px;
+        top: 416px;
+    }
+
+    #education > h4:nth-child(5) {
         display: none;
     }
 }
