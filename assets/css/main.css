@@ -1099,7 +1099,7 @@ footer > h4:first-child{
     body > header > a > h3{
         font-family: 'Open Sans', sans-serif;
         position: absolute;
-        font-size: 36px;
+        font-size: 42px;
         width: max-content;
         font-weight: 800;
         display: inline-block;
@@ -1113,6 +1113,16 @@ footer > h4:first-child{
     /*Navigation Bar*/
     body > header > nav {
         display: none;
+    }
+
+    main > section:first-child > div:nth-child(1) > h1 {
+        position: relative;
+        font-weight: 800;
+        letter-spacing: 1px;
+        width: max-content;
+        margin: auto;
+        font-size: 17px;
+        padding-top: 120px;
     }
 
 }
