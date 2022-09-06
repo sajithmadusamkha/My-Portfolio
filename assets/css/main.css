@@ -1200,4 +1200,13 @@ footer > h4:first-child{
     .line-two {
         display: none;
     }
+
+    main > section:nth-child(2) > img {
+        width: 127px;
+        height: 234px;
+        margin: auto;
+        right: 0;
+        left: 0;
+        top: 158px;
+    }
 }
