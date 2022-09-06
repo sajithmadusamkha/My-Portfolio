@@ -1325,7 +1325,121 @@ footer > h4:first-child{
     }
 
     #skills > h3:nth-child(5){
-        top: 365px;
+        top: 474px;
     }
+
+    .programing-languages{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+        gap: 16px;
+        row-gap: 62px;
+        top: 210px;
+        width: 249px;
+        height: 170px;
+    }
+
+    .programing-languages > div {
+        width: 50px;
+        height: 50px;
+    }
+
+    .programing-languages > div > img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .language-title {
+        width: 269px;
+        height: 30px;
+        left: 31px;
+        top: 385px;
+        margin: auto;
+        position: absolute;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        display: grid;
+    }
+
+    .language-title > h4 {
+        font-size: 14px;
+        top: -112px;
+        position: relative;
+        text-align: center;
+    }
+
+    .language-title > h4:nth-child(1) {
+        left: -44px;
+    }
+
+    .language-title > h4:nth-child(2) {
+        left: -147px;
+    }
+
+    .language-title > h4:nth-child(3) {
+        left: -211px;
+    }
+
+    .language-title > h4:nth-child(4) {
+        left: -282px;
+    }
+
+    .language-title > h4:nth-child(5) {
+        top: -30px;
+        left: -85px;
+    }
+
+    .language-title > h4:nth-child(6) {
+        top: -30px;
+        left: -133px;
+    }
+
+    .language-title > h4:nth-child(7) {
+        top: -30px;
+        left: -201px;
+    }
+
+    .language-title > h4:nth-child(8) {
+        top: -30px;
+        left: -267px;
+    }
+
+    .tools {
+        top: 510px;
+        width: 269px;
+        height: 80px;
+    }
+
+    .tools > div {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tools > div > img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .tools-title > h4 {
+        font-size: 14px;
+    }
+
+    .tools-title {
+        left: 18px;
+        top: 572px;
+    }
+
+    .tools-title > h4:nth-child(2) {
+        padding-left: 18px;
+    }
+
+    .tools-title > h4:nth-child(3) {
+        padding-left: 17px;
+    }
+
+    .tools-title > h4:nth-child(4) {
+        padding-left: 5px;
+    }
+
 
 }
