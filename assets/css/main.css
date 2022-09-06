@@ -142,14 +142,6 @@ main > section:first-child > div:nth-child(1) > h4:nth-child(3) {
     font-size: 22px;
 }
 
-main > section:first-child > div:nth-child(3) {
-    display: flex;
-    justify-content: center;
-    padding-top: 60px;
-    position: relative;
-    z-index: 1;
-}
-
 main > section:first-child > div:nth-child(2) {
     display: flex;
     position: relative;
@@ -183,6 +175,14 @@ main > section:first-child > div:nth-child(2) > button:nth-child(2) {
     color: white;
     background-color: #151515;
     border: 2px solid #6600CE;
+}
+
+main > section:first-child > div:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    position: relative;
+    z-index: 1;
 }
 
 main > section:first-child > div:nth-child(3) > a > img{
@@ -1118,11 +1118,43 @@ footer > h4:first-child{
     main > section:first-child > div:nth-child(1) > h1 {
         position: relative;
         font-weight: 800;
+        text-align: center;
         letter-spacing: 1px;
-        width: max-content;
+        width: 278px;
         margin: auto;
-        font-size: 17px;
-        padding-top: 120px;
+        font-size: 36px;
+        padding-top: 110px;
     }
+
+    main > section:first-child > div:nth-child(1) > h4:nth-child(2) {
+        position: relative;
+        text-align: center;
+        width: 246px;
+        margin: auto;
+        left: 0;
+        right: 0;
+        padding-top: 18px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    main > section:first-child > div:nth-child(1) > h4:nth-child(3) {
+        position: relative;
+        text-align: center;
+        width: 246px;
+        margin: auto;
+        left: 0;
+        right: 0;
+        padding-top: 6px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    main > section:first-child > div:nth-child(2) {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+    }
+
 
 }
