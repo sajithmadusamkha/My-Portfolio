@@ -1207,26 +1207,34 @@ footer > h4:first-child{
         margin: auto;
         right: 0;
         left: 0;
-        top: 158px;
+        top: 145px;
     }
 
     main > section:nth-child(2) > p:nth-child(4) {
         text-align: center;
         width: 275px;
         margin: auto;
-        padding-top: 340px;
+        padding-top: 320px;
         left: 0;
         right: 0;
         font-size: 13px;
     }
 
     main > section:nth-child(2) > p:nth-child(5) {
-        top: 540px;
+        top: 530px;
         margin: auto;
         width: 275px;
         text-align: center;
         left: 0;
         right: 0;
         font-size: 13px;
+    }
+
+    main > section:nth-child(2) > button {
+        top: 620px;
+    }
+
+    main > section:nth-child(2) > h4 {
+        display: none;
     }
 }
