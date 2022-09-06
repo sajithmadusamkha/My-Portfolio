@@ -1082,3 +1082,44 @@ footer > h4:first-child{
     display: flex;
     justify-content: space-between;
 }
+
+/*Responsive Design*/
+
+@media all and (max-width: 320px) {
+    header{
+        background: #151515;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        color: white;
+        height: 70px;
+        width: 100vw;
+    }
+
+    body > header > a > h3{
+        font-family: 'Open Sans', sans-serif;
+        position: absolute;
+        font-size: 24px;
+        width: max-content;
+        font-weight: 800;
+        display: inline-block;
+        margin: auto;
+        left: 0;
+        right: 0;
+        padding-top: 14px;
+        color: white;
+    }
+
+    /*Navigation Bar*/
+    body > header > nav {
+        position: absolute;
+        right: 0;
+        left: 0;
+        width: max-content;
+        top: 28px;
+        margin: auto;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+    }
+}
