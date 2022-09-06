@@ -1115,6 +1115,23 @@ footer > h4:first-child{
         display: none;
     }
 
+    /*Section Title style*/
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-title:after {
+        position: absolute;
+        margin: auto;
+        width: 65px;
+        content: "";
+        left: 0;
+        bottom: -10px;
+        right: 0;
+        border-bottom: 2px solid white;
+    }
+
+    /*Home*/
     main > section:first-child > div:nth-child(1) > h1 {
         position: relative;
         font-weight: 800;
@@ -1172,6 +1189,15 @@ footer > h4:first-child{
     }
 
     .foreground-text {
+        display: none;
+    }
+
+    /*About*/
+    .line-one {
+        display: none;
+    }
+
+    .line-two {
         display: none;
     }
 }
