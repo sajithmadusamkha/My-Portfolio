@@ -1298,4 +1298,13 @@ footer > h4:first-child{
     #education > h4:nth-child(5) {
         display: none;
     }
+
+    /*Skills*/
+    #skills > div:nth-child(2) {
+        display: none;
+    }
+
+    #skills > div:nth-child(3) {
+        display: none;
+    }
 }
