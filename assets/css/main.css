@@ -1209,4 +1209,24 @@ footer > h4:first-child{
         left: 0;
         top: 158px;
     }
+
+    main > section:nth-child(2) > p:nth-child(4) {
+        text-align: center;
+        width: 275px;
+        margin: auto;
+        padding-top: 340px;
+        left: 0;
+        right: 0;
+        font-size: 13px;
+    }
+
+    main > section:nth-child(2) > p:nth-child(5) {
+        top: 540px;
+        margin: auto;
+        width: 275px;
+        text-align: center;
+        left: 0;
+        right: 0;
+        font-size: 13px;
+    }
 }
