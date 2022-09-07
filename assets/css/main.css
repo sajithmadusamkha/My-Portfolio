@@ -1503,4 +1503,55 @@ footer > h4:first-child{
         display: none;
     }
 
+    /*services*/
+    #services > div:nth-child(2) {
+        display: none;
+    }
+
+    #services > div:nth-child(3) {
+        display: none;
+    }
+
+    .service-content {
+        width: max-content;
+        height: 479px;
+        top: 152px;
+        flex-direction: column;
+    }
+
+    .service-content > div {
+        width: 185px;
+        height: 145px;
+    }
+
+    .service-content > div > img {
+        display: none;
+    }
+
+    .service-content > div:nth-child(1) > h3 {
+        left: 0;
+    }
+
+    .service-content > div > h3 {
+        text-align: center;
+        font-size: 18px;
+        top: 25px;
+    }
+
+    .service-content > div > h4 {
+        top: 70px;
+    }
+
+    .service-content > div:nth-child(2) > h3 {
+        left: 27px;
+    }
+
+    .service-content > div:nth-child(3) > h3 {
+        left: 64px;
+    }
+
+    #services > h4:nth-child(5) {
+        display: none;
+    }
+
 }
