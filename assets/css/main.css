@@ -1554,4 +1554,21 @@ footer > h4:first-child{
         display: none;
     }
 
+    /*contacts*/
+    #contacts > div:nth-child(2) {
+        display: none;
+    }
+
+    #contacts > div:nth-child(3) {
+        display: none;
+    }
+
+    #contacts > form {
+        width: max-content;
+        top: 106px;
+    }
+
+    #contacts > h4:nth-child(5) {
+        display: none;
+    }
 }
