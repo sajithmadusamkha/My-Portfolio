@@ -150,7 +150,7 @@ main > section:first-child > div:nth-child(2) {
     z-index: 1;
 }
 
-main > section:first-child > div:nth-child(2) > button:nth-child(1) {
+main > section:first-child > div:nth-child(2) > a > button:nth-child(1) {
     border: none;
     padding: 8px;
     width: 190px;
