@@ -1441,5 +1441,66 @@ footer > h4:first-child{
         padding-left: 5px;
     }
 
+    /*Latest Projects*/
+    #latest-projects > div:nth-child(2) {
+        display: none;
+    }
+
+    #latest-projects > div:nth-child(3) {
+        display: none;
+    }
+
+    #latest-projects > h1:nth-child(1){
+        font-size: 24px;
+    }
+
+    .main-cards > div:nth-child(2) {
+        display: none;
+    }
+
+    .main-cards > div:nth-child(3) {
+        display: none;
+    }
+
+    #latest-projects .main-cards {
+        width: max-content;
+        height: 440px;
+        top: 85px;
+    }
+
+    .card {
+        width: 284px;
+        height: 372px;
+    }
+
+    #latest-projects .card .card-image {
+        width: 284px;
+    }
+
+    #latest-projects .card .card-image img {
+        width: 272px;
+        height: 200px;
+    }
+
+    .name-description {
+        width: 273px;
+        top: 245px;
+    }
+
+    .name-description .description {
+        padding-top: 3px;
+    }
+
+    .card-content .card-button {
+        top: 326px;
+    }
+
+    .load-more {
+        top: 400px;
+    }
+
+    #latest-projects > h4:nth-child(5) {
+        display: none;
+    }
 
 }
