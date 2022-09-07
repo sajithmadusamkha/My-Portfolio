@@ -1571,4 +1571,16 @@ footer > h4:first-child{
     #contacts > h4:nth-child(5) {
         display: none;
     }
+
+    /*footer*/
+    footer > h4:first-child {
+        font-size: 14px;
+        width: max-content;
+        left: 0;
+        right: 0;
+    }
+
+    .footer-icons {
+        display: none;
+    }
 }
