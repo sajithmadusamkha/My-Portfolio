@@ -1671,12 +1671,61 @@ footer > h4:first-child{
         padding-top: 35px;
     }
 
-    main > section:first-child > div:nth-child(3) > a > img{
+    main > section:first-child > div:nth-child(3) > a > img {
         width: 32px;
         padding-left: 13px;
     }
 
     .foreground-text {
+        display: none;
+    }
+
+    /*About*/
+    .line-one {
+        display: none;
+    }
+
+    .line-two {
+        display: none;
+    }
+
+    main > section:nth-child(2) > img {
+        width: 127px;
+        height: 234px;
+        margin: auto;
+        right: 0;
+        left: 0;
+        top: 145px;
+    }
+
+    main > section:nth-child(2) > p:nth-child(4) {
+        text-align: center;
+        width: 275px;
+        margin: auto;
+        padding-top: 320px;
+        left: 0;
+        right: 0;
+        font-size: 13px;
+    }
+
+    main > section:nth-child(2) > p:nth-child(5) {
+        top: 530px;
+        margin: auto;
+        width: 275px;
+        text-align: center;
+        left: 0;
+        right: 0;
+        font-size: 13px;
+    }
+
+    main > section:nth-child(2) > button {
+        top: 620px;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+
+    main > section:nth-child(2) > h4 {
         display: none;
     }
 
