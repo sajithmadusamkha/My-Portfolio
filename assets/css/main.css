@@ -1371,6 +1371,7 @@ footer > h4:first-child{
         margin: -132px 0 0 -42px;
     }
 
+    /*Contacts*/
     #contacts > div:nth-child(2) {
         width: 262px;
         left: 30px;
@@ -1390,6 +1391,18 @@ footer > h4:first-child{
         font-size: 150px;
         top: 610px;
         margin: -132px 0 0 -49px;
+    }
+
+    /*footer*/
+    footer > h4:first-child {
+        font-size: 14px;
+        width: max-content;
+        left: 0;
+        right: 0;
+    }
+
+    .footer-icons {
+        display: none;
     }
 
 }
