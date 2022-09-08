@@ -1371,6 +1371,27 @@ footer > h4:first-child{
         margin: -132px 0 0 -42px;
     }
 
+    #contacts > div:nth-child(2) {
+        width: 262px;
+        left: 30px;
+    }
+
+    #contacts > div:nth-child(3) {
+        width: 262px;
+        right: 30px;
+    }
+
+    #contacts > form {
+        width: 88vw;
+        top: 106px;
+    }
+
+    #contacts > h4:nth-child(5) {
+        font-size: 150px;
+        top: 610px;
+        margin: -132px 0 0 -49px;
+    }
+
 }
 
 @media all and (max-width: 425px){
