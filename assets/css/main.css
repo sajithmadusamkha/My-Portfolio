@@ -1084,6 +1084,86 @@ footer > h4:first-child{
 }
 
 /*Responsive Design*/
+@media all and (max-width: 768px){
+    /*Header*/
+    header{
+        height: 116px;
+    }
+
+    /*Header Text*/
+    body > header > a > h3{
+        position: absolute;
+        margin: auto;
+        width: max-content;
+        left: 0;
+        right: 0;
+    }
+
+    /*Navigation Bar*/
+    body > header > nav {
+        right: 0;
+        left: 30px;
+        margin: auto;
+        top: 38px;
+    }
+
+    header > nav > ul {
+        margin: 0;
+        padding-top: 14px;
+        list-style: none;
+    }
+
+    main > section:first-child > div:nth-child(1) > h1 {
+        font-size: 46px;
+        padding-top: 190px;
+    }
+
+    .foreground-text {
+        font-size: 130px;
+        bottom: 112px;
+        margin: -132px 0 0 -26px;
+    }
+
+    .line-one {
+        width: 254px;
+        left: 30px;
+    }
+
+    .line-two {
+        width: 254px;
+        right: 30px;
+    }
+
+    main > section:nth-child(2) > p:nth-child(4) {
+        width: 382px;
+        top: 200px;
+        padding-top: 0;
+        left: 30px;
+    }
+
+    main > section:nth-child(2) > p:nth-child(5) {
+        top: 419px;
+        width: 424px;
+        left: 30px;
+    }
+
+    main > section:nth-child(2) > img {
+        right: 30px;
+    }
+
+    main > section:nth-child(2) > button {
+        left: 30px;
+        top: 572px;
+    }
+
+    main > section:nth-child(2) > h4 {
+        font-size: 185px;
+        top: 562px;
+        margin: -132px 0 0 -42px;
+    }
+
+}
+
 @media all and (max-width: 425px){
 
     body > header > a > h3 {
