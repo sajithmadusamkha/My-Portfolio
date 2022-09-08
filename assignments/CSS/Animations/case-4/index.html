@@ -3,8 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Car Animation</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <style>
+
+
+        main {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background: url("assets/images/sky.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > img:nth-child(2) {
+            position: absolute;
+            width: 100vw;
+            margin: auto;
+            bottom: 0;
+            right: 0;
+            height: 30%;
+            left: 0;
+        }
+
+        main > img:first-child {
+            position: absolute;
+            width: 100vw;
+            top: 256px;
+        }
+    </style>
 </head>
 <body>
-
+<main>
+    <img src="assets/images/city.png">
+    <img src="assets/images/road.jpg">
+</main>
 </body>
 </html>
