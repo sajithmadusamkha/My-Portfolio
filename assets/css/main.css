@@ -1179,6 +1179,68 @@ footer > h4:first-child{
         margin: -132px 0 0 -30px;
     }
 
+    /*Skills*/
+    #skills > div:nth-child(2) {
+        width: 260px;
+        left: 30px;
+    }
+
+    #skills > div:nth-child(3) {
+        width: 260px;
+        right: 30px;
+    }
+
+    .programing-languages > div {
+        width: 50px;
+        height: 50px;
+    }
+
+    .programing-languages > div > img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .programing-languages {
+        width: 680px;
+    }
+
+    .language-title {
+        left: 34px;
+        top: 326px;
+    }
+
+    .language-title > h4 {
+        font-size: 16px;
+    }
+
+    .language-title > h4:nth-child(2) {
+        padding-left: 48px;
+    }
+
+    .language-title > h4:nth-child(3) {
+        padding-left: 42px;
+    }
+
+    .language-title > h4:nth-child(4) {
+        padding-left: 52px;
+    }
+
+    .language-title > h4:nth-child(5) {
+        padding-left: 38px;
+    }
+
+    .language-title > h4:nth-child(6) {
+        padding-left: 21px;
+    }
+
+    .language-title > h4:nth-child(7) {
+        padding-left: 24px;
+    }
+
+    .language-title > h4:nth-child(8) {
+        padding-left: 25px;
+    }
+
 }
 
 @media all and (max-width: 425px){
