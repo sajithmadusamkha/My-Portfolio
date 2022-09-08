@@ -1286,6 +1286,36 @@ footer > h4:first-child{
         top: 565px;
     }
 
+    /*Latest Projects*/
+    #latest-projects > div:nth-child(2) {
+        width: 204px;
+        left: 30px;
+    }
+
+    #latest-projects > div:nth-child(3) {
+        width: 204px;
+        right: 30px;
+    }
+
+    #latest-projects .main-cards {
+        width: 732px;
+        top: 32px;
+    }
+
+    .main-cards > div:nth-child(3) {
+        display: none;
+    }
+
+    .load-more {
+        top: 466px;
+    }
+
+    #latest-projects > h4:nth-child(5) {
+        font-size: 150px;
+        top: 612px;
+        margin: -132px 0 0 -33px;
+    }
+
 }
 
 @media all and (max-width: 425px){
