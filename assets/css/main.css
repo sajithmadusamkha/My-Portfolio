@@ -1107,12 +1107,6 @@ footer > h4:first-child{
         top: 38px;
     }
 
-    header > nav > ul {
-        margin: 0;
-        padding-top: 14px;
-        list-style: none;
-    }
-
     main > section:first-child > div:nth-child(1) > h1 {
         font-size: 46px;
         padding-top: 190px;
