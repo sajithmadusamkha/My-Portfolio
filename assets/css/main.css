@@ -1173,6 +1173,12 @@ footer > h4:first-child{
         right: 30px;
     }
 
+    #education > h4:nth-child(5) {
+        font-size: 138px;
+        top: 637px;
+        margin: -132px 0 0 -30px;
+    }
+
 }
 
 @media all and (max-width: 425px){
