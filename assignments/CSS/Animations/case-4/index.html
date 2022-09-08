@@ -18,18 +18,20 @@
 
         main > img:nth-child(2) {
             position: absolute;
-            width: 100vw;
+            width: 200vw;
             margin: auto;
             bottom: 0;
             right: 0;
-            height: 30%;
             left: 0;
+            animation: move 5s infinite;
         }
 
         main > img:first-child {
             position: absolute;
-            width: 100vw;
-            top: 256px;
+            width: 200vw;
+            height: 30%;
+            top: 351px;
+            animation: move 5s infinite;
         }
 
         main > img:nth-child(3) {
@@ -37,7 +39,46 @@
             height: 150px;
             width: 320px;
             left: 645px;
-            bottom: 20%;
+            bottom: 21%;
+        }
+
+        main > img:nth-child(4) {
+            position: fixed;
+            height: 68px;
+            width: 68px;
+            left: 866px;
+            bottom: 22%;
+            animation: rotate 10s infinite;
+        }
+
+        main > img:nth-child(5) {
+            position: fixed;
+            height: 68px;
+            width: 68px;
+            left: 669px;
+            bottom: 22%;
+            animation: rotate 10s infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(720deg);
+            }
+            100% {
+                transform: rotate(540deg);
+            }
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(0px);
+            }
+            100% {
+                transform: translateX(-1400px);
+            }
         }
     </style>
 </head>
