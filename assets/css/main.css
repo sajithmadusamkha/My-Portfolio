@@ -1303,6 +1303,20 @@ footer > h4:first-child{
         top: 550px;
         margin: -132px 0 0 -42px;
     }
+
+    #contacts > div:nth-child(2) {
+        width: 386px;
+        left: 30px;
+    }
+
+    #contacts > div:nth-child(3) {
+        width: 386px;
+        right: 30px;
+    }
+
+    #contacts > h4:nth-child(5) {
+        font-size: 172px;
+    }
 }
 
 @media all and (max-width: 768px){
