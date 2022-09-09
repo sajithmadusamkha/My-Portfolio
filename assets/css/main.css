@@ -819,7 +819,7 @@ main > section:nth-child(2) > h4 {
     width: 190px;
     height: 50px;
     margin: auto;
-    left: 0;
+    left: 0 !important;
     right: 0;
     border-radius: 25px;
     top: 486px;
@@ -1216,6 +1216,37 @@ footer > h4:first-child{
     #skills > h4:nth-child(10) {
         font-size: 172px;
         margin: -132px 0 0 -47px;
+        top: 534px;
+    }
+
+    /*Projects*/
+    #latest-projects > div:nth-child(2) {
+        width: 328px;
+        left: 30px;
+    }
+
+    #latest-projects > div:nth-child(3) {
+        width: 328px;
+        right: 30px;
+    }
+
+    #latest-projects .main-cards {
+        width: 772px;
+        top: 32px;
+    }
+
+    .main-cards > div:nth-child(3) {
+        display: none;
+    }
+
+    #latest-projects > h4:nth-child(5) {
+        font-size: 172px;
+        top: 548px;
+        margin: -132px 0 0 -39px;
+    }
+
+    .load-more {
+        top: 471px;
     }
 }
 
