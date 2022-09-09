@@ -1101,6 +1101,29 @@ footer > h4:first-child{
         width: 378px;
         right: 30px;
     }
+
+    main > section:nth-child(2) > p:nth-child(4) {
+        width: 560px;
+        top: 234px;
+        padding-top: 0;
+        left: 30px;
+    }
+
+    main > section:nth-child(2) > p:nth-child(5) {
+        top: 376px;
+        width: 424px;
+        left: 30px;
+    }
+
+    main > section:nth-child(2) > button {
+        left: 30px;
+        top: 544px;
+    }
+
+    main > section:nth-child(2) > h4 {
+        font-size: 172px;
+        margin: -132px 0 0 -33px;
+    }
 }
 
 @media all and (max-width: 768px){
