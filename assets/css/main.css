@@ -1084,6 +1084,25 @@ footer > h4:first-child{
 }
 
 /*Responsive Design*/
+@media all and (max-width: 1024px) {
+    /*Home*/
+    .foreground-text {
+        font-size: 172px;
+        margin: -132px 0 0 -35px;
+    }
+
+    /*About*/
+    .line-one {
+        width: 378px;
+        left: 30px;
+    }
+
+    .line-two {
+        width: 378px;
+        right: 30px;
+    }
+}
+
 @media all and (max-width: 768px){
     /*Header*/
     header{
@@ -1118,6 +1137,7 @@ footer > h4:first-child{
         margin: -132px 0 0 -26px;
     }
 
+    /*About*/
     .line-one {
         width: 254px;
         left: 30px;
