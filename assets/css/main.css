@@ -1117,12 +1117,29 @@ footer > h4:first-child{
 
     main > section:nth-child(2) > button {
         left: 30px;
-        top: 544px;
+        top: 532px;
     }
 
     main > section:nth-child(2) > h4 {
         font-size: 172px;
         margin: -132px 0 0 -33px;
+    }
+
+    /*Education*/
+    #education > div:nth-child(2) {
+        width: 375px;
+        left: 30px;
+    }
+
+    #education > div:nth-child(3) {
+        width: 375px;
+        right: 30px;
+    }
+
+    #education > h4:nth-child(5) {
+        font-size: 172px;
+        top: 560px;
+        margin: -132px 0 0 -38px;
     }
 }
 
@@ -1149,6 +1166,7 @@ footer > h4:first-child{
         top: 38px;
     }
 
+    /*Home*/
     main > section:first-child > div:nth-child(1) > h1 {
         font-size: 46px;
         padding-top: 190px;
