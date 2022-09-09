@@ -1141,6 +1141,82 @@ footer > h4:first-child{
         top: 560px;
         margin: -132px 0 0 -38px;
     }
+
+    /*Skills*/
+    #skills > div:nth-child(2) {
+        width: 390px;
+        left: 30px;
+    }
+
+    #skills > div:nth-child(3) {
+        width: 390px;
+        right: 30px;
+    }
+
+    .programing-languages {
+        width: 898px;
+    }
+
+    .language-title {
+        left: 68px;
+    }
+
+    .language-title > h4:nth-child(2) {
+        padding-left: 71px;
+    }
+
+    .language-title > h4:nth-child(3) {
+        padding-left: 61px;
+    }
+
+    .language-title > h4:nth-child(4) {
+        padding-left: 72px;
+    }
+
+    .language-title > h4:nth-child(5) {
+        padding-left: 57px;
+    }
+
+    .language-title > h4:nth-child(6) {
+        padding-left: 39px;
+    }
+
+    .language-title > h4:nth-child(7) {
+        padding-left: 45px;
+    }
+
+    .language-title > h4:nth-child(8) {
+        padding-left: 78px;
+    }
+
+    .language-title > h4:nth-child(8) {
+        padding-left: 44px;
+    }
+
+    .tools {
+        width: 430px;
+    }
+
+    .tools-title {
+        left: 294px;
+    }
+
+    .tools-title > h4:nth-child(2) {
+        padding-left: 45px;
+    }
+
+    .tools-title > h4:nth-child(3) {
+        padding-left: 47px;
+    }
+
+    .tools-title > h4:nth-child(4) {
+        padding-left: 29px;
+    }
+
+    #skills > h4:nth-child(10) {
+        font-size: 172px;
+        margin: -132px 0 0 -47px;
+    }
 }
 
 @media all and (max-width: 768px){
