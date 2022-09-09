@@ -1248,6 +1248,61 @@ footer > h4:first-child{
     .load-more {
         top: 471px;
     }
+
+    /*Services*/
+    #services > div:nth-child(2) {
+        width: 392px;
+        left: 30px;
+    }
+
+    #services > div:nth-child(3) {
+        width: 392px;
+        right: 30px;
+    }
+
+    .service-content {
+        width: 706px;
+        height: 179px;
+        top: 278px;
+    }
+
+    .service-content > div {
+        width: 200px;
+        height: 179px;
+    }
+
+    .service-content > div > img {
+        opacity: 0.09;
+        top: 34px;
+    }
+
+    .service-content > div:nth-child(1) > h3 {
+        left: 0;
+    }
+
+    .service-content > div > h3 {
+        text-align: center;
+        font-size: 18px;
+        top: 43px;
+    }
+
+    .service-content > div > h4 {
+        top: 87px;
+    }
+
+    .service-content > div:nth-child(2) > h3 {
+        left: 27px;
+    }
+
+    .service-content > div:nth-child(3) > h3 {
+        left: 64px;
+    }
+
+    #services > h4:nth-child(5) {
+        font-size: 172px;
+        top: 550px;
+        margin: -132px 0 0 -42px;
+    }
 }
 
 @media all and (max-width: 768px){
