@@ -1084,6 +1084,53 @@ footer > h4:first-child{
 }
 
 /*Responsive Design*/
+@media all and (max-width: 1440px){
+    /*About*/
+    .line-one {
+        width: 552px;
+        left: 60px;
+    }
+
+    .line-two {
+        width: 552px;
+        right: 60px;
+    }
+
+    /*Education*/
+    #education > div:nth-child(2) {
+        width: 552px;
+        left: 60px;
+    }
+
+    #education > div:nth-child(3) {
+        width: 552px;
+        right: 60px;
+    }
+
+    /*Skills*/
+    #skills > div:nth-child(2) {
+        width: 552px;
+        left: 60px;
+    }
+
+    #skills > div:nth-child(3) {
+        width: 552px;
+        right: 60px;
+    }
+
+    .language-title {
+        left: 150px;
+    }
+
+    .tools-title {
+        left: 446px;
+    }
+
+    #skills > h4:nth-child(10) {
+        top: 522px;
+    }
+}
+
 @media all and (max-width: 1024px) {
     /*Home*/
     .foreground-text {
