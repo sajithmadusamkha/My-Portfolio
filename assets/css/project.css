@@ -12,3 +12,29 @@
     background-color: #313131;
     border-radius: 3px;
 }
+
+body {
+    background-color: #151515;
+    font-family: 'Open Sans', sans-serif;
+}
+.btn-back {
+    position: relative;
+    color: white;
+    width: 180px;
+    top: 42px;
+    left: 60px;
+    height: 50px;
+    text-decoration: none;
+}
+
+.btn-back > img {
+    width: 32px;
+}
+
+.btn-back > h4 {
+    position: relative;
+    font-weight: 600;
+    font-size: 14px;
+    bottom: 47px;
+    left: 40px;
+}
