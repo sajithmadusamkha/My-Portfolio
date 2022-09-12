@@ -1168,6 +1168,21 @@ footer > h4:first-child{
     #services > h4:nth-child(5) {
         top: 564px;
     }
+
+    /*Contacts*/
+    #contacts > div:nth-child(2) {
+        width: 564px;
+        left: 60px;
+    }
+
+    #contacts > div:nth-child(3) {
+        width: 564px;
+        right: 60px;
+    }
+
+    #contacts > h4:nth-child(5) {
+        top: 546px;
+    }
 }
 
 @media all and (max-width: 1024px) {
