@@ -53,7 +53,7 @@ a {
     color: white;
     position: absolute;
     width: max-content;
-    top: 0;
+    top: 40px;
     left: 0;
     right: 0;
     margin: auto;
@@ -68,7 +68,8 @@ a {
     left: 0;
     right: 0;
     top: 132px;
-    grid-template-columns: 3fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .big-project-1 {
@@ -83,7 +84,7 @@ a {
 .folder-icon {
     position: relative;
     width: 32px;
-    top: 32px;
+    top: 10px;
     left: 32px;
 }
 
@@ -106,8 +107,9 @@ a {
 .project-link {
     position: relative;
     display: inline-block;
-    top: 54px;
-    left: 32px;
+    top: 106px;
+    width: 300px;
+    left: -5px;
 }
 
 .stm-sys {
@@ -127,8 +129,8 @@ a {
     color: white;
     margin: 0;
     left: 32px;
-    width: 300px;
-    top: 70px;
+    width: 271px;
+    top: 120px;
     font-weight: 600;
 }
 
@@ -140,7 +142,7 @@ a {
     left: 32px;
     height: 20px;
     font-size: 12px;
-    top: 170px;
+    top: 215px;
     letter-spacing: 1px;
     color: white;
     font-family: 'IBM Plex Mono', monospace;
@@ -148,4 +150,25 @@ a {
 
 .use-lang {
     margin: 0;
+}
+
+.folder-icon-2 {
+    top: 30px;
+}
+
+.project-link-2 {
+    left: -5px;
+    top: 98px;
+}
+
+.project-2-description {
+    top: 110px;
+}
+
+.project-languages-2{
+    top: 236px;
+}
+
+.project-languages-3 {
+    top: 197px;
 }
