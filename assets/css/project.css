@@ -19,6 +19,7 @@ body {
 }
 .btn-back {
     position: relative;
+    display: inline-block;
     color: white;
     width: 180px;
     top: 42px;
@@ -37,4 +38,39 @@ body {
     font-size: 14px;
     bottom: 47px;
     left: 40px;
+}
+
+.big-projects {
+    position: relative;
+    width: 100%;
+}
+
+.big-projects > h1 {
+    color: white;
+    position: absolute;
+    width: max-content;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.project-grid {
+    position: absolute;
+    display: grid;
+    width: 1130px;
+    height: 360px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 132px;
+    grid-template-columns: 3fr;
+}
+
+.big-project-1 {
+
+}
+
+.big-project-1 > img {
+    width: 32px;
 }
