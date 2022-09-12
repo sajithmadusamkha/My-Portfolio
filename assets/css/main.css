@@ -1084,6 +1084,16 @@ footer > h4:first-child{
 }
 
 /*Responsive Design*/
+@media all and (max-width: 2560px){
+    header {
+        height: 100px;
+    }
+
+    body > header > a > h3 {
+        font-size: 56px;
+    }
+}
+
 @media all and (max-width: 1440px){
     /*About*/
     .line-one {
