@@ -1084,18 +1084,12 @@ footer > h4:first-child{
 }
 
 /*Responsive Design*/
-@media all and (max-width: 2560px){
-    /*Header*/
-    header {
-        height: 100px;
-    }
-
-    body > header > a > h3 {
-        font-size: 56px;
-    }
-}
-
 @media all and (max-width: 1440px){
+    /*Home*/
+    main > section:first-child > div:nth-child(1) > h1 {
+        padding-top: 208px;
+    }
+
     /*About*/
     .line-one {
         width: 552px;
@@ -1201,6 +1195,10 @@ footer > h4:first-child{
     .foreground-text {
         font-size: 172px;
         margin: -132px 0 0 -35px;
+    }
+
+    main > section:first-child > div:nth-child(1) > h1 {
+        padding-top: 208px;
     }
 
     /*About*/
