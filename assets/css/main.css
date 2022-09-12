@@ -830,17 +830,6 @@ main > section:nth-child(2) > h4 {
     border: none;
 }
 
-.pagination > div {
-    width: 45px;
-    height: 10px;
-    background-color: #E3C8FF;
-    border-radius: 10px;
-}
-
-.pagination > div:nth-child(2){
-    background-color: #6600CE;
-}
-
 #latest-projects > h4:nth-child(5) {
     font-family: 'Abril Fatface', cursive;
     position: absolute;
@@ -1101,7 +1090,11 @@ footer > h4:first-child{
         right: 60px;
     }
 
-    /*Education*/
+    main > section:nth-child(2) > p:nth-child(4) {
+        top: 76px;
+    }
+
+        /*Education*/
     #education > div:nth-child(2) {
         width: 552px;
         left: 60px;
