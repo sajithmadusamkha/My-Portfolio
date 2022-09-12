@@ -1085,6 +1085,7 @@ footer > h4:first-child{
 
 /*Responsive Design*/
 @media all and (max-width: 2560px){
+    /*Header*/
     header {
         height: 100px;
     }
