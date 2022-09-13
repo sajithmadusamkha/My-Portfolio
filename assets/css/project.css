@@ -198,3 +198,55 @@ section {
     top: 154px;
     font-size: 24px;
 }
+
+.css-basic-grid {
+    position: absolute;
+    margin: auto;
+    top: 225px;
+    left: 0;
+    right: 0;
+    display: grid;
+    width: 1130px;
+    height: 165px;
+    row-gap: 14px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.case {
+    position: relative;
+    width: 360px;
+    height: 70px;
+    background-color: #2A2A2A;
+    border-radius: 8px;
+    box-shadow: 0 0 18px 3px;
+    color: black;
+    transition: all 250ms ease;
+}
+
+.case:hover {
+    border: 2px solid #a03cff;
+    transition: all 250ms ease;
+}
+
+.case > h4 {
+    position: absolute;
+    width: max-content;
+    left: 65px;
+    height: 20px;
+    top: 0;
+    bottom: 0;
+    color: white;
+    margin: auto;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.case > img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 25px;
+    width: 22px;
+}
