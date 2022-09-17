@@ -7,8 +7,9 @@ body{
 }
 
 .content {
+    border-radius: 12px;
     height: 295px;
-    box-shadow: 0 1px 14px 1px;
+    box-shadow: 0 1px 10px 1px;
 }
 
 .content-img {
