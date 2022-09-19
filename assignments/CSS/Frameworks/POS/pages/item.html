@@ -41,6 +41,7 @@
 </header>
 
 <main>
+    <!-- Item Form -->
     <div class="container-fluid position-relative" style="top: -52px;">
         <div class="page-title p-3">
             <img src="../assets/images/item.png" alt="items" width="32" height="32" class="d-inline-block">
@@ -48,6 +49,52 @@
         </div>
     </div>
 
+    <div class="container-fluid position-relative" style="bottom: 28px">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card" style="border: none; box-shadow: 0 1px 10px 1px; border-radius: 12px;">
+                    <div class="card-header bg-warning fw-bold" style="border: none; border-top-left-radius: 12px; border-top-right-radius: 12px;">Add New Item</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label>Item Code</label>
+                                        <input class="form-control" id="itemCode" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <div class="form-group">
+                                        <label>Item Name</label>
+                                        <input class="form-control" id="itemName" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pt-4">
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label>Quantity</label>
+                                        <input class="form-control" id="quantity" min="1" type="number">
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <div class="form-group">
+                                        <label>Item Price</label>
+                                        <input class="form-control" id="itemPrice" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-12 pt-4">
+                                    <button class="btn btn-warning w-100">Save Item</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6"></div>
+        </div>
+    </div>
 </main>
 
 <!-- import js for bootstrap -->
