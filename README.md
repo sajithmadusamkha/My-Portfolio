@@ -1,7 +1,7 @@
 
 # My Portfolio
 
-Design & built by Sajith Madusankha.
+Design & built by [Sajith Madusankha.](https://github.com/sajithmadusamkha)
 
 
 
