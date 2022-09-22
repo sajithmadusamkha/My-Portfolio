@@ -30,10 +30,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
-                    <a class="nav-link" href="#">Orders</a>
-                    <a class="nav-link" href="#">Items</a>
-                    <a class="nav-link" href="#">Customers</a>
+                    <a id="dashboard-btn" class="nav-link" href="#">Dashboard</a>
+                    <a id="order-btn" class="nav-link" href="#">Orders</a>
+                    <a id="item-btn" class="nav-link" href="#">Items</a>
+                    <a id="customer-btn" class="nav-link" href="#">Customers</a>
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
 
 <main>
     <!--Dashboard content-->
-    <div class="container text-center">
+    <div class="container text-center dashboard">
         <div class="row gap-2 p-2">
             <div class="col">
                 <div class="p-3 content">
@@ -98,14 +98,14 @@
     </div>
 
     <!--Order Content-->
-    <div class="container-fluid position-relative" style="top: -52px;">
+    <div class="container-fluid position-relative order" style="top: -52px; display: none">
         <div class="page-title p-3">
             <img src="assets/images/orders.png" alt="orders" width="32" height="32" class="d-inline-block">
             <h1 class="d-inline-block fw-bold fs-3 m-0 position-relative" style="top: 8px;">Orders</h1>
         </div>
     </div>
 
-    <div class="container-fluid position-relative" style="bottom: 35px">
+    <div class="container-fluid position-relative order" style="bottom: 35px; display: none">
         <div class="row">
             <div class="col-lg-4 mt-2">
                 <div class="card" style="border: none; box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px; border-radius: 12px;">
@@ -268,14 +268,14 @@
     </div>
 
     <!-- Item content -->
-    <div class="container-fluid position-relative" style="top: -52px;">
+    <div class="container-fluid position-relative item" style="top: -52px; display: none">
         <div class="page-title p-3">
             <img src="assets/images/item.png" alt="items" width="32" height="32" class="d-inline-block">
             <h1 class="d-inline-block fw-bold fs-3 m-0 position-relative" style="top: 8px;">Item</h1>
         </div>
     </div>
 
-    <div class="container-fluid position-relative" style="bottom: 35px">
+    <div class="container-fluid position-relative item" style="bottom: 35px; display: none">
         <div class="row">
             <div class="col-lg-6 mt-3">
                 <div class="card" style="border: none; box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px; border-radius: 12px;">
@@ -395,14 +395,14 @@
     </div>
 
     <!-- Customer content -->
-    <div class="container-fluid position-relative" style="top: -52px;">
+    <div class="container-fluid position-relative customer" style="top: -52px; display: none">
         <div class="page-title p-3">
             <img src="assets/images/consumer%20(1).png" alt="customer" width="32" height="32" class="d-inline-block">
             <h1 class="d-inline-block fw-bold fs-3 m-0 position-relative" style="top: 8px;">Customer</h1>
         </div>
     </div>
 
-    <div class="container-fluid position-relative" style="bottom: 35px">
+    <div class="container-fluid position-relative customer" style="bottom: 35px; display: none">
         <div class="row">
             <div class="col-lg-6 mt-3">
                 <div class="card" style="border: none; box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px; border-radius: 12px;">
@@ -524,5 +524,39 @@
 
 <!-- import js for bootstrap -->
 <script src="assets/js/bootstrap.min.js"></script>
+
+<!-- import jquery-->
+<script src="assets/jquery-3.6.1.min.js"></script>
+<script>
+
+    $("#order-btn").click(function () {
+        $(".order").css("display", "inline-block");
+        $(".dashboard").css("display", "none");
+        $(".item").css("display", "none");
+        $(".customer").css("display", "none");
+    });
+
+    $("#item-btn").click(function () {
+        $(".order").css("display", "none");
+        $(".dashboard").css("display", "none");
+        $(".item").css("display", "inline-block");
+        $(".customer").css("display", "none");
+    });
+
+    $("#customer-btn").click(function () {
+        $(".order").css("display", "none");
+        $(".dashboard").css("display", "none");
+        $(".item").css("display", "none");
+        $(".customer").css("display", "inline-block");
+    });
+
+    $("#dashboard-btn").click(function () {
+        $(".order").css("display", "none");
+        $(".dashboard").css("display", "block");
+        $(".item").css("display", "none");
+        $(".customer").css("display", "none");
+    });
+
+</script>
 </body>
 </html>
