@@ -37,3 +37,23 @@ body {
 .display input::placeholder {
     color: #9490ac;
 }
+
+.button {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    margin-top: 40px;
+}
+
+.button input[type="button"] {
+    font-size: 20px;
+    padding: 17px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button input[type="button"]:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
