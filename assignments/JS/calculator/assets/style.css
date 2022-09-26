@@ -55,5 +55,14 @@ body {
 }
 
 .button input[type="button"]:hover {
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+}
+
+input[type="button"]#equal {
+    grid-row: span 2;
+    background-color: #a342ff;
+}
+
+input[type="button"][value="0"] {
+    grid-column: span 2;
 }
