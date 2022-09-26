@@ -44,28 +44,17 @@
         <input type="button" value="2" class="input-btn">
         <input type="button" value="3" class="input-btn">
 
-        <input type="button" value="=" class="input-btn" id="equal">
+        <input type="button" value="=" id="equal">
         <input type="button" value="0" class="input-btn">
         <input type="button" value="." class="input-btn">
     </div>
 </div>
 
 <script>
-    let equal_btn = 0;
+    let equal_pressed = 0;
 
     /* All input buttons without AC and DEL */
     let button_input = document.querySelectorAll(".input-btn")
-
-    button_input.forEach((btn_class) => {
-       btn_class.addEventListener("click", function () {
-          if (equal == 1) {
-              input.value = "";
-              equal = 0;
-          }
-          /* Display value */
-           input.value += btn_class.value;
-       });
-    });
 
     /* input,equal,clear and erase */
     let input = document.getElementById("input")
@@ -73,8 +62,45 @@
     let clear = document.getElementById("clear")
     let erase = document.getElementById("erase")
 
-    equal.addEventListener("click",function () {
-       alert("click");
+    window.onload = () => {
+        input.value = "";
+    }
+
+    button_input.forEach((btn_class) => {
+        btn_class.addEventListener("click",  function () {
+            if (equal_pressed == 1) {
+                input.value = "";
+                equal_pressed = 0;
+            }
+            /* Display value of user input */
+            input.value += btn_class.value;
+        });
+    });
+
+    equal.addEventListener("click", function () {
+       equal_pressed = 1;
+       let inp_val = input.value;
+
+       try {
+           let solution = eval(inp_val);
+           /* True for natural numbers */
+           /* False for decimal numbers */
+           if (Number.isInteger(solution)){
+               input.value = solution;
+           } else {
+               input.value = solution.toFixed(2);
+           }
+       }catch (err) {
+           alert("Invalid input")
+       }
+    });
+
+    clear.addEventListener("click", function () {
+       input.value = "";
+    });
+
+    erase.addEventListener("click" ,function () {
+       input.value = input.value.substr(0, input.value.length-1);
     });
 </script>
 </body>
