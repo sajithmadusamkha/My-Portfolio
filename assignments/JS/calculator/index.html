@@ -50,6 +50,9 @@
     </div>
 </div>
 
+<!-- Import jquery -->
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+
 <script>
 /*    let equal_pressed = 0;
 
@@ -99,6 +102,35 @@
        input.value = input.value.substr(0, input.value.length-1);
     });*/
 
+$("#one").click(function () {
+    let output = $("#input").val();
+
+    if(output === 0){
+        $("#input").val('1');
+    } else {
+        $("#input").val(output + '1');
+    }
+});
+
+$("#two").click(function () {
+    let output = $("#input").val();
+
+    if(output === 0){
+        $("#input").val('2');
+    } else {
+        $("#input").val(output + '2');
+    }
+});
+
+$("#thr").click(function () {
+    let output = $("#input").val();
+
+    if(output === 0){
+        $("#input").val('3');
+    } else {
+        $("#input").val(output + '3');
+    }
+});
 </script>
 </body>
 </html>
