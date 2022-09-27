@@ -54,53 +54,6 @@
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 
 <script>
-/*    let equal_pressed = 0;
-
-    /!* All input buttons without AC and DEL *!/
-    let button_input = document.querySelectorAll(".input-btn")
-
-    /!* input,equal,clear and erase *!/
-    let input = document.getElementById("input")
-    let equal = document.getElementById("equal")
-    let clear = document.getElementById("clear")
-    let erase = document.getElementById("erase")
-
-    button_input.forEach((btn_class) => {
-        btn_class.addEventListener("click",  function () {
-            if (equal_pressed == 1) {
-                input.value = "";
-                equal_pressed = 0;
-            }
-            /!* Display value of user input *!/
-            input.value += btn_class.value;
-        });
-    });
-
-    equal.addEventListener("click", function () {
-       equal_pressed = 1;
-       let inp_val = input.value;
-
-       try {
-           let solution = eval(inp_val);
-           /!* True for natural numbers *!/
-           /!* False for decimal numbers *!/
-           if (Number.isInteger(solution)){
-               input.value = solution;
-           } else {
-               input.value = solution.toFixed(2);
-           }
-       }catch (err) {
-           alert("Invalid input")
-       }
-    });
-
-    clear.addEventListener("click", function () {
-       input.value = "";
-    });
-
-    erase.addEventListener("click" ,function () {
-       input.value = input.value.substr(0, input.value.length-1);
-    });*/
 
 $("#one").click(function () {
     let output = $("#input").val();
@@ -189,6 +142,16 @@ $("#nine").click(function () {
         $("#input").val('9');
     } else {
         $("#input").val(output + '9');
+    }
+});
+
+$("#zer").click(function () {
+    let output = $("#input").val();
+
+    if(output === 0){
+        $("#input").val('0');
+    } else {
+        $("#input").val(output + '0');
     }
 });
 

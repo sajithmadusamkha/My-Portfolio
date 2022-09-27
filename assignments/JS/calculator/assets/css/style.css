@@ -23,6 +23,8 @@ body {
 
 .display {
     width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+    border-radius: 5px;
 }
 
 .display input {
