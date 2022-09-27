@@ -29,34 +29,34 @@
         <!-- Single erase -->
         <input type="button" value="DEL" id="erase">
 
-        <input type="button" value="/" class="input-btn">
-        <input type="button" value="*" class="input-btn">
-        <input type="button" value="7" class="input-btn">
-        <input type="button" value="8" class="input-btn">
-        <input type="button" value="9" class="input-btn">
-        <input type="button" value="-" class="input-btn">
-        <input type="button" value="6" class="input-btn">
-        <input type="button" value="5" class="input-btn">
-        <input type="button" value="4" class="input-btn">
-        <input type="button" value="+" class="input-btn">
+        <input type="button" value="/" id="div" class="input-btn">
+        <input type="button" value="*" id="mul" class="input-btn">
+        <input type="button" value="7" id="sev" class="input-btn">
+        <input type="button" value="8" id="eight" class="input-btn">
+        <input type="button" value="9" id="nine" class="input-btn">
+        <input type="button" value="-" id="ten" class="input-btn">
+        <input type="button" value="6" id="six" class="input-btn">
+        <input type="button" value="5" id="fiv" class="input-btn">
+        <input type="button" value="4" id="four" class="input-btn">
+        <input type="button" value="+" id="plu" class="input-btn">
 
-        <input type="button" value="1" class="input-btn">
-        <input type="button" value="2" class="input-btn">
-        <input type="button" value="3" class="input-btn">
+        <input type="button" value="1" id="one" class="input-btn">
+        <input type="button" value="2" id="two" class="input-btn">
+        <input type="button" value="3" id="thr" class="input-btn">
 
         <input type="button" value="=" id="equal">
-        <input type="button" value="0" class="input-btn">
-        <input type="button" value="." class="input-btn">
+        <input type="button" value="0" id="zer" class="input-btn">
+        <input type="button" value="." id="dot" class="input-btn">
     </div>
 </div>
 
 <script>
-    let equal_pressed = 0;
+/*    let equal_pressed = 0;
 
-    /* All input buttons without AC and DEL */
+    /!* All input buttons without AC and DEL *!/
     let button_input = document.querySelectorAll(".input-btn")
 
-    /* input,equal,clear and erase */
+    /!* input,equal,clear and erase *!/
     let input = document.getElementById("input")
     let equal = document.getElementById("equal")
     let clear = document.getElementById("clear")
@@ -68,7 +68,7 @@
                 input.value = "";
                 equal_pressed = 0;
             }
-            /* Display value of user input */
+            /!* Display value of user input *!/
             input.value += btn_class.value;
         });
     });
@@ -79,8 +79,8 @@
 
        try {
            let solution = eval(inp_val);
-           /* True for natural numbers */
-           /* False for decimal numbers */
+           /!* True for natural numbers *!/
+           /!* False for decimal numbers *!/
            if (Number.isInteger(solution)){
                input.value = solution;
            } else {
@@ -97,7 +97,8 @@
 
     erase.addEventListener("click" ,function () {
        input.value = input.value.substr(0, input.value.length-1);
-    });
+    });*/
+
 </script>
 </body>
 </html>
