@@ -34,7 +34,7 @@
         <input type="button" value="7" id="sev" class="input-btn">
         <input type="button" value="8" id="eight" class="input-btn">
         <input type="button" value="9" id="nine" class="input-btn">
-        <input type="button" value="-" id="ten" class="input-btn">
+        <input type="button" value="-" id="minus" class="input-btn">
         <input type="button" value="6" id="six" class="input-btn">
         <input type="button" value="5" id="fiv" class="input-btn">
         <input type="button" value="4" id="four" class="input-btn">
@@ -191,6 +191,66 @@ $("#nine").click(function () {
         $("#input").val(output + '9');
     }
 });
+
+$("#dot").click(function () {
+    let output = $("#input").val();
+
+    $("#input").val(output + '.');
+});
+
+/* Operators */
+var finalOutPut = {
+    fValue: "",
+    sValue: "",
+    operator: ""
+}
+
+$("#div").click(function () {
+    let output = $("#input").val();
+
+    finalOutPut.fValue = output;
+    finalOutPut.operator = "/";
+
+    $("#input").val('');
+});
+
+$("#plu").click(function () {
+    let output = $("#input").val();
+
+    finalOutPut.fValue = output;
+    finalOutPut.operator = "+";
+
+    $("#input").val('');
+});
+
+$("#minus").click(function () {
+    let output = $("#input").val();
+
+    finalOutPut.fValue = output;
+    finalOutPut.operator = "-";
+
+    $("#input").val('');
+});
+
+$("#mul").click(function () {
+    let output = $("#input").val();
+
+    finalOutPut.fValue = output;
+    finalOutPut.operator = "*";
+
+    $("#input").val('');
+});
+
+$("#equal").click(function () {
+    let output = $("#input").val();
+
+    finalOutPut.fValue = output;
+
+    $("#input").val('');
+});
+
+
+
 </script>
 </body>
 </html>
