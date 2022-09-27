@@ -20,14 +20,14 @@
 <body>
 <div class="calculator">
     <div class="display">
-        <input type="text" placeholder="0" id="input" disabled>
+        <input type="text" id="input" disabled>
     </div>
     <div class="button">
         <!-- Full erase -->
         <input type="button" value="AC" id="clear">
 
         <!-- Single erase -->
-        <input type="button" value="DEL" id="erase">
+        <input type="button" value="DEL" id="del">
 
         <input type="button" value="/" id="div" class="input-btn">
         <input type="button" value="*" id="mul" class="input-btn">
@@ -199,7 +199,7 @@ $("#dot").click(function () {
 });
 
 /* Operators */
-var finalOutPut = {
+var calculation = {
     fValue: "",
     sValue: "",
     operator: ""
@@ -208,8 +208,8 @@ var finalOutPut = {
 $("#div").click(function () {
     let output = $("#input").val();
 
-    finalOutPut.fValue = output;
-    finalOutPut.operator = "/";
+ calculation.fValue = output;
+ calculation.operator = "/";
 
     $("#input").val('');
 });
@@ -217,8 +217,8 @@ $("#div").click(function () {
 $("#plu").click(function () {
     let output = $("#input").val();
 
-    finalOutPut.fValue = output;
-    finalOutPut.operator = "+";
+ calculation.fValue = output;
+ calculation.operator = "+";
 
     $("#input").val('');
 });
@@ -226,8 +226,8 @@ $("#plu").click(function () {
 $("#minus").click(function () {
     let output = $("#input").val();
 
-    finalOutPut.fValue = output;
-    finalOutPut.operator = "-";
+ calculation.fValue = output;
+ calculation.operator = "-";
 
     $("#input").val('');
 });
@@ -235,22 +235,65 @@ $("#minus").click(function () {
 $("#mul").click(function () {
     let output = $("#input").val();
 
-    finalOutPut.fValue = output;
-    finalOutPut.operator = "*";
+ calculation.fValue = output;
+ calculation.operator = "*";
 
     $("#input").val('');
 });
+
+/* Final outPut */
+function evaluate() {
+    let getCalculation = null;
+
+    if(calculation.operator === '/') {
+        var fNum = parseFloat(calculation.fValue);
+        var sNum = parseFloat(calculation.sValue);
+
+        getCalculation = fNum / sNum;
+        $("#input").val(getCalculation);
+    }
+
+    if(calculation.operator === '+') {
+        var fNum = parseFloat(calculation.fValue);
+        var sNum = parseFloat(calculation.sValue);
+
+        getCalculation = fNum + sNum;
+        $("#input").val(getCalculation);
+    }
+
+    if(calculation.operator === '-') {
+        var fNum = parseFloat(calculation.fValue);
+        var sNum = parseFloat(calculation.sValue);
+
+        getCalculation = fNum - sNum;
+        $("#input").val(getCalculation);
+    }
+
+    if(calculation.operator === '*') {
+        var fNum = parseFloat(calculation.fValue);
+        var sNum = parseFloat(calculation.sValue);
+
+        getCalculation = fNum * sNum;
+        $("#input").val(getCalculation);
+    }
+}
 
 $("#equal").click(function () {
     let output = $("#input").val();
 
-    finalOutPut.fValue = output;
+    calculation.sValue = output;
 
-    $("#input").val('');
+    evaluate();
 });
 
+$("#del").click(function () {
+    let output = $("#input").val();
+    document.getElementById("input").value = output.substr(0, output.length - 1);
+});
 
-
+$("#clear").click(function () {
+    $("#input").val('');
+});
 </script>
 </body>
 </html>
