@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <title>Smart POS</title>
+  <title>Manage Customer</title>
 </head>
 <body>
 <header>
@@ -74,7 +74,7 @@
                 <div class="col-3">
                   <div class="form-group">
                     <label>Email</label>
-                    <input class="form-control" id="email" min="1" type="number">
+                    <input class="form-control" id="email" type="text">
                   </div>
                 </div>
                 <div class="col-9">
@@ -84,7 +84,7 @@
                   </div>
                 </div>
                 <div class="col-12 pt-4">
-                  <button class="btn btn-warning w-100" id="add-customer">Save Customer</button>
+                  <button type="button" class="btn btn-warning w-100" id="addCustomer">Save Customer</button>
                 </div>
               </div>
             </form>
@@ -130,7 +130,7 @@
                 <div class="col-3">
                   <div class="form-group">
                     <label>Email</label>
-                    <input class="form-control" id="update-emal" type="text">
+                    <input class="form-control" id="update-email" type="text">
                   </div>
                 </div>
                 <div class="col-9">
@@ -163,7 +163,9 @@
         <th scope="col">Email</th>
         <th scope="col">Address</th>
         </thead>
-        <tbody></tbody>
+        <tbody id="tblCustomer">
+
+        </tbody>
       </table>
     </div>
   </div>
@@ -177,9 +179,38 @@
 
 <!-- JS -->
 <script>
-  $("#add-customer").click(function () {
-    alert("h");
+  var customers = [];
+
+  $("#addCustomer").click(function () {
+    let customerId = $("#cusId").val();
+    let customerName = $("#cusName").val();
+    let customerAddress = $("#address").val();
+    let customerEmail = $("#email").val();
+
+    var customerObject = {
+      id: customerId,
+      name: customerName,
+      address: customerAddress,
+      email: customerEmail
+    }
+
+    customers.push(customerObject);
+    console.log(customers);
+
+    loadAllCustomers();
   });
+
+  function loadAllCustomers() {
+    $("#tblCustomer").empty();
+
+    for (var customer of customers) {
+      console.log(customer);
+
+      var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.email}</td><td>${customer.address}</td></tr>`
+
+      $("#tblCustomer").append(row);
+    }
+  }
 </script>
 </body>
 </html>
