@@ -84,7 +84,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 pt-4">
-                                    <button class="btn btn-warning w-100" id="saveItem">Save Item</button>
+                                    <button type="button" class="btn btn-warning w-100" id="saveItem">Save Item</button>
                                 </div>
                             </div>
                         </form>
@@ -163,7 +163,7 @@
                 <th scope="col">Quantity On Hand</th>
                 <th scope="col">Price</th>
                 </thead>
-                <tbody></tbody>
+                <tbody id="tblItems"></tbody>
             </table>
         </div>
     </div>
@@ -177,9 +177,38 @@
 
 <!-- JS -->
 <script>
+    var items = [];
+
     $("#saveItem").click(function () {
-       alert("h");
+       let itemCode = $("#itemCode").val();
+       let itemName = $("#itemName").val();
+       let quantity = $("#quantity").val();
+       let price = $("#itemPrice").val();
+
+       var itemObject = {
+           code: itemCode,
+           name: itemName,
+           itemQuantity: quantity,
+           itemPrice: price
+       }
+
+       items.push(itemObject);
+       console.log(items);
+
+       loadAllItems();
     });
+
+    function loadAllItems() {
+        $("#tblItems").empty();
+
+        for (var item of items) {
+            console.log(item);
+
+            var row = `<tr><td>${item.code}</td><td>${item.name}</td><td>${item.itemQuantity}</td><td>${item.itemPrice}</td></tr>`;
+
+            $("#tblItems").append(row);
+        }
+    }
 </script>
 </body>
 </html>
