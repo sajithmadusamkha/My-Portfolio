@@ -196,6 +196,7 @@
        console.log(items);
 
        loadAllItems();
+       bindRowClick();
     });
 
     function loadAllItems() {
@@ -208,6 +209,20 @@
 
             $("#tblItems").append(row);
         }
+    }
+
+    function bindRowClick() {
+        $("#tblItems>tr").click(function () {
+           let code = $(this).children(":eq(0)").text();
+           let name = $(this).children(":eq(1)").text();
+           let qtyOnHand = $(this).children(":eq(2)").text();
+           let price = $(this).children(":eq(3)").text();
+
+           $('#itemCode').val(code);
+           $('#itemName').val(name);
+           $('#quantity').val(qtyOnHand);
+           $('#itemPrice').val(price);
+        });
     }
 </script>
 </body>
