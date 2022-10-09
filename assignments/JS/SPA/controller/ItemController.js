@@ -43,3 +43,32 @@ function bindRowClick() {
         $('#itemPrice').val(price);
     });
 }
+
+$("#update-itemCode").on('keyup', function (event) {
+   if(event.code == "Enter"){
+       let typeCode = $("#update-itemCode").val();
+       let item = searchItem(typeCode);
+       if(item != null){
+           setTextFieldValues(item.code, item.name, item.itemQuantity, item.itemPrice);
+       } else {
+           alert("There is no Item available for that " + typeCode);
+           setTextFieldValues("", "", "", "");
+       }
+   }
+});
+
+function setTextFieldValues(code, name, qtyOnHand, price) {
+    $("#update-itemCode").val(code);
+    $("#update-itemName").val(name);
+    $("#update-quantity").val(qtyOnHand);
+    $("#update-itemPrice").val(price);
+}
+
+function searchItem(itemCode) {
+    for (const item of items) {
+        if(item.code == itemCode){
+            return item;
+        }
+    }
+    return null;
+}
