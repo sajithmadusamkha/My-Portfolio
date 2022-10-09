@@ -310,7 +310,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 pt-4">
-                                    <button class="btn btn-warning w-100">Save Item</button>
+                                    <button type="button" class="btn btn-warning w-100" id="saveItem">Save Item</button>
                                 </div>
                             </div>
                         </form>
@@ -389,7 +389,7 @@
                 <th scope="col">Quantity On Hand</th>
                 <th scope="col">Price</th>
                 </thead>
-                <tbody></tbody>
+                <tbody id="tblItems"></tbody>
             </table>
         </div>
     </div>
@@ -525,10 +525,20 @@
 <!-- import js for bootstrap -->
 <script src="assets/js/bootstrap.min.js"></script>
 
-<!-- import jquery-->
+<!-- import jquery -->
 <script src="assets/jquery-3.6.1.min.js"></script>
 
-<!-- import Index controller js-->
+<!-- import Index controller js -->
 <script src="controller/IndexController.js"></script>
+
+<!-- import db js -->
+<script src="db/db.js"></script>
+
+<!-- import Customer controller js -->
+<script src="controller/CustomerController.js"></script>
+
+<!-- import Item controller js -->
+<script src="controller/ItemController.js"></script>
+
 </body>
 </html>
