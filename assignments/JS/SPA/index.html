@@ -426,8 +426,8 @@
                             <div class="row pt-4">
                                 <div class="col-3">
                                     <div class="form-group">
-                                        <label>Email</label>
-                                        <input class="form-control" id="email" min="1" type="number">
+                                        <label>Salary</label>
+                                        <input class="form-control" id="email" type="text">
                                     </div>
                                 </div>
                                 <div class="col-9">
@@ -437,7 +437,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 pt-4">
-                                    <button class="btn btn-warning w-100">Save Customer</button>
+                                    <button type="button" class="btn btn-warning w-100">Save Customer</button>
                                 </div>
                             </div>
                         </form>
@@ -482,8 +482,8 @@
                             <div class="row pt-4">
                                 <div class="col-3">
                                     <div class="form-group">
-                                        <label>Email</label>
-                                        <input class="form-control" id="update-emal" type="text">
+                                        <label>Salary</label>
+                                        <input class="form-control" id="update-salary" type="text">
                                     </div>
                                 </div>
                                 <div class="col-9">
@@ -513,7 +513,7 @@
                 <thead class="table-warning">
                 <th scope="col">Customer ID</th>
                 <th scope="col">Name</th>
-                <th scope="col">Email</th>
+                <th scope="col">Salary</th>
                 <th scope="col">Address</th>
                 </thead>
                 <tbody></tbody>
@@ -527,36 +527,8 @@
 
 <!-- import jquery-->
 <script src="assets/jquery-3.6.1.min.js"></script>
-<script>
 
-    $("#order-btn").click(function () {
-        $(".order").css("display", "inline-block");
-        $(".dashboard").css("display", "none");
-        $(".item").css("display", "none");
-        $(".customer").css("display", "none");
-    });
-
-    $("#item-btn").click(function () {
-        $(".order").css("display", "none");
-        $(".dashboard").css("display", "none");
-        $(".item").css("display", "inline-block");
-        $(".customer").css("display", "none");
-    });
-
-    $("#customer-btn").click(function () {
-        $(".order").css("display", "none");
-        $(".dashboard").css("display", "none");
-        $(".item").css("display", "none");
-        $(".customer").css("display", "inline-block");
-    });
-
-    $("#dashboard-btn").click(function () {
-        $(".order").css("display", "none");
-        $(".dashboard").css("display", "block");
-        $(".item").css("display", "none");
-        $(".customer").css("display", "none");
-    });
-
-</script>
+<!-- import Index controller js-->
+<script src="controller/IndexController.js"></script>
 </body>
 </html>
