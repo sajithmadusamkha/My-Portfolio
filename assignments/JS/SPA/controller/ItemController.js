@@ -31,10 +31,10 @@ function bindRowClick() {
         let qtyOnHand = $(this).children(":eq(2)").text();
         let price = $(this).children(":eq(3)").text();
 
-        $('#itemCode').val(code);
-        $('#itemName').val(name);
-        $('#quantity').val(qtyOnHand);
-        $('#itemPrice').val(price);
+        $('#update-itemCode').val(code);
+        $('#update-itemName').val(name);
+        $('#update-quantity').val(qtyOnHand);
+        $('#update-itemPrice').val(price);
     });
 }
 
