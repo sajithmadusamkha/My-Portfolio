@@ -4,15 +4,9 @@ $("#saveItem").click(function () {
     let quantity = $("#quantity").val();
     let price = $("#itemPrice").val();
 
-    var itemObject = {
-        code: itemCode,
-        name: itemName,
-        itemQuantity: quantity,
-        itemPrice: price
-    }
+    var itemObject = item(itemCode,itemName,quantity,price)
 
     items.push(itemObject);
-    console.log(items);
 
     loadAllItems();
     bindRowClick();
@@ -21,10 +15,10 @@ $("#saveItem").click(function () {
 function loadAllItems() {
     $("#tblItems").empty();
 
-    for (var item of items) {
+    for (let item of items) {
         console.log(item);
 
-        var row = `<tr><td>${item.code}</td><td>${item.name}</td><td>${item.itemQuantity}</td><td>${item.itemPrice}</td></tr>`;
+        var row = `<tr><td>${item.code}</td><td>${item.name}</td><td>${item.quantity}</td><td>${item.price}</td></tr>`;
 
         $("#tblItems").append(row);
     }
