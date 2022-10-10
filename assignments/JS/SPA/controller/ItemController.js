@@ -1,3 +1,6 @@
+$("#itemCode").focus();
+$("#update-itemCode").focus();
+
 $("#saveItem").click(function () {
     let itemCode = $("#itemCode").val();
     let itemName = $("#itemName").val();
@@ -10,6 +13,7 @@ $("#saveItem").click(function () {
 
     loadAllItems();
     bindRowClick();
+    loadAllCustomerForOption();
 });
 
 function loadAllItems() {
@@ -43,12 +47,21 @@ $("#update-itemCode").on('keyup', function (event) {
        let typeCode = $("#update-itemCode").val();
        let item = searchItem(typeCode);
        if(item != null){
-           setTextFieldValues(item.code, item.name, item.itemQuantity, item.itemPrice);
+           setTextFieldValues(item.code, item.name, item.quantity, item.price);
        } else {
            alert("There is no Item available for that " + typeCode);
            setTextFieldValues("", "", "", "");
        }
    }
+});
+
+$("#updateItemSearchBtn").click(function () {
+    let code = $("#selectCodeForUpdate").val();
+    let search = $("#updateItemSearch").val();
+    let item = searchItem(code);
+    if(item != null){
+        setTextFieldValues(item.code, item.name, item.quantity, item.price);
+    }
 });
 
 function setTextFieldValues(code, name, qtyOnHand, price) {
@@ -66,3 +79,12 @@ function searchItem(itemCode) {
     }
     return null;
 }
+
+function loadAllCustomerForOption() {
+    $("#selectCodeForUpdate").empty();
+        for (let item of items) {
+            $("#selectCodeForUpdate").append(`<option>${item.code}</option>`);
+        }
+}
+
+const itemCode = /^(I00-)[0-9]{1,3}$/;
