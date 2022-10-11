@@ -1,5 +1,4 @@
 $("#itemCode").focus();
-$("#update-itemCode").focus();
 
 $("#saveItem").click(function () {
     let itemCode = $("#itemCode").val();
