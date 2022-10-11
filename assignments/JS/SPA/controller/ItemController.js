@@ -42,7 +42,7 @@ function bindRowClick() {
     });
 }
 
-$("#update-itemCode").on('keyup', function (event) {
+/*$("#update-itemCode").on('keyup', function (event) {
    if(event.code == "Enter"){
        let typeCode = $("#update-itemCode").val();
        let item = searchItem(typeCode);
@@ -57,7 +57,7 @@ $("#update-itemCode").on('keyup', function (event) {
            setTextFieldValues("", "", "", "");
        }
    }
-});
+});*/
 
 $("#updateItemSearchBtn").click(function () {
     let code = $("#updateItemSearch").val();
@@ -164,7 +164,7 @@ function loadAllCustomerForOption() {
         }
 }
 
-/* Item regular expressions */
+/****** Item regular expressions ******/
 const regExCode = /^(I00-)[0-9]{1,3}$/;
 const regExItemName = /^[A-z 1-9]{5,20}$/;
 const regExItemQty = /^[0-9]{1,8}$/;
@@ -191,11 +191,11 @@ $("#itemCode,#itemName,#quantity,#itemPrice").on('blur',function () {
 });
 
 $('#itemCode').on('keydown', function (event) {
-   if (event.key == "Enter" && check(regExCode, $('#itemCode'))) {
-       $('#itemName').focus();
-   } else {
-       $('#itemCode').focus();
-   }
+    if (event.key == "Enter" && check(regExCode, $('#itemCode'))) {
+        $('#itemName').focus();
+    } else {
+        $('#itemCode').focus();
+    }
 });
 
 $('#itemName').on('keydown', function (event) {
@@ -219,6 +219,51 @@ $('#itemPrice').on('keydown', function (event) {
     }
 });
 
+/****** Item Update ******/
+let itemValidationsForUpdated = [];
+itemValidationsForUpdated.push({reg: regExCode, field: $('#update-itemCode'),error:'Item Code Pattern Is Wrong : I00-001'});
+itemValidationsForUpdated.push({reg: regExItemName, field: $('#update-itemName'),error:'Item Name Pattern Is Wrong : A-z 0-9 Ex: Naadu 5kg'});
+itemValidationsForUpdated.push({reg: regExItemQty, field: $('#update-quantity'),error:'Item Quantity Pattern Is Wrong : 0-9'});
+itemValidationsForUpdated.push({reg: regExPrice, field: $('#update-itemPrice'),error:'Item Price Pattern Is Wrong : 100 or 100.00'});
+
+$("#update-itemCode,#update-itemName,#update-quantity,#update-itemPrice").on('keyup',function () {
+    checkValidityForUpdate();
+});
+
+$("#update-itemCode,#update-itemName,#update-quantity,#update-itemPrice").on('blur',function () {
+    checkValidityForUpdate();
+});
+
+$('#update-itemCode').on('keydown', function (event) {
+    if (event.key == "Enter" && check(regExCode, $('#update-itemCode'))) {
+        $('#update-itemName').focus();
+    } else {
+        $('#update-itemCode').focus();
+    }
+});
+
+$('#update-itemName').on('keydown', function (event) {
+    if (event.key == "Enter" && check(regExItemName, $('#update-itemName'))) {
+        $('#update-quantity').focus();
+    }
+});
+
+$('#update-quantity').on('keydown', function (event) {
+    if (event.key == "Enter" && check(regExItemQty, $('#update-quantity'))) {
+        $('#update-itemPrice').focus();
+    }
+});
+
+$('#update-itemPrice').on('keydown', function (event) {
+    if (event.key == "Enter" && check(regExItemQty, $('#update-itemPrice'))) {
+        let res = confirm("Do you want to updated this item.?");
+        if(res) {
+            $('#update-itemPrice,#update-itemName,#update-quantity,#update-itemPrice').val("");
+        }
+    }
+});
+/****** Item Update End ******/
+
 function clearTexts(){
     $('#itemCode').focus();
     $('#itemCode,#itemName,#quantity,#itemPrice').val("");
@@ -236,6 +281,18 @@ function checkValidity() {
         }
     }
     setBtnState(errCount);
+}
+
+function checkValidityForUpdate() {
+    let errCount = 0;
+    for (let validation of itemValidationsForUpdated) {
+        if (check(validation.reg,validation.field)) {
+            inputSuccess(validation.field,"");
+        } else {
+            errCount += 1;
+            inputError(validation.field,validation.error)
+        }
+    }
 }
 
 function setBtnState(val){
@@ -273,4 +330,3 @@ function defaultText(textField,error){
     textField.css("border","1px solid #ced4da");
     textField.parent().children('span').text(error);
 }
-
