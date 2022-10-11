@@ -50,7 +50,11 @@ $("#update-itemCode").on('keyup', function (event) {
        if(item != null){
            setTextFieldValues(item.code, item.name, item.quantity, item.price);
        } else {
-           alert("There is no Item available for that " + typeCode);
+           Swal.fire({
+               icon: 'error',
+               title: 'Oops...',
+               text: 'There is no Item available for that item code ' + typeCode,
+           });
            setTextFieldValues("", "", "", "");
        }
    }
@@ -65,10 +69,69 @@ $("#updateItemSearchBtn").click(function () {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'There is no Item available for that ' + code,
+            text: 'There is no Item available for that item code ' + code,
         });
     }
 });
+
+$('#itemDelete').click(function () {
+   let deleteCode = $('#update-itemCode').val();
+   let option = confirm("Do you really want to delete item code: " + deleteCode);
+   if(option){
+       if (deleteItem(deleteCode)){
+           Swal.fire('Item Successfully Deleted..');
+           setTextFieldValues("","","","")
+       } else {
+           Swal.fire({
+               icon: 'error',
+               title: 'Oops...',
+               text: 'No such Item to delete. please check the code ' + code,
+           });
+       }
+   }
+});
+
+$('#itemUpdate').click( function () {
+    let updateCode = $('#update-itemCode').val();
+    let response = updateItem(updateCode);
+    if(response){
+        Swal.fire('Item updated Successfully');
+        setTextFieldValues("","","","")
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Update Failed..!',
+        });
+    }
+})
+
+function deleteItem(itemCode) {
+    let item = searchItem(itemCode);
+    if(item != null) {
+        let indexNo = items.indexOf(item);
+        items.splice(indexNo,1);
+        loadAllItems();
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function updateItem(itemCode) {
+    let item = searchItem(itemCode);
+    if(item != null){
+        item.code = $('#update-itemCode').val();
+        item.name = $('#update-itemName').val();
+        item.quantity = $('#update-quantity').val();
+        item.price = $('#update-itemPrice').val();
+        loadAllItems();
+        bindRowClick();
+        return true;
+    } else {
+        return false;
+    }
+}
 
 function setTextFieldValues(code, name, qtyOnHand, price) {
     $("#update-itemCode").val(code);
