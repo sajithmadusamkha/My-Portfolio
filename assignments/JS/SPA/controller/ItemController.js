@@ -14,6 +14,7 @@ $("#saveItem").click(function () {
     loadAllItems();
     bindRowClick();
     loadAllCustomerForOption();
+    clearTextFields("","","","")
 });
 
 function loadAllItems() {
@@ -56,11 +57,16 @@ $("#update-itemCode").on('keyup', function (event) {
 });
 
 $("#updateItemSearchBtn").click(function () {
-    let code = $("#selectCodeForUpdate").val();
-    let search = $("#updateItemSearch").val();
+    let code = $("#updateItemSearch").val();
     let item = searchItem(code);
     if(item != null){
         setTextFieldValues(item.code, item.name, item.quantity, item.price);
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'There is no Item available for that ' + code,
+        });
     }
 });
 
@@ -69,6 +75,13 @@ function setTextFieldValues(code, name, qtyOnHand, price) {
     $("#update-itemName").val(name);
     $("#update-quantity").val(qtyOnHand);
     $("#update-itemPrice").val(price);
+}
+
+function clearTextFields(code, name, qtyOnHand, price){
+    $("#itemCode").val(code);
+    $("#itemName").val(name);
+    $("#quantity").val(qtyOnHand);
+    $("#itemPrice").val(price);
 }
 
 function searchItem(itemCode) {
