@@ -14,7 +14,7 @@ $("#saveItem").click(function () {
     loadAllItems();
     bindRowClick();
     loadAllCustomerForOption();
-    clearTextFields("","","","")
+    clearTexts();
 });
 
 function loadAllItems() {
@@ -77,13 +77,6 @@ function setTextFieldValues(code, name, qtyOnHand, price) {
     $("#update-itemPrice").val(price);
 }
 
-function clearTextFields(code, name, qtyOnHand, price){
-    $("#itemCode").val(code);
-    $("#itemName").val(name);
-    $("#quantity").val(qtyOnHand);
-    $("#itemPrice").val(price);
-}
-
 function searchItem(itemCode) {
     for (const item of items) {
         if(item.code == itemCode){
@@ -125,6 +118,41 @@ $("#itemCode,#itemName,#quantity,#itemPrice").on('keyup',function () {
 $("#itemCode,#itemName,#quantity,#itemPrice").on('blur',function () {
     checkValidity();
 });
+
+$('#itemCode').on('keydown', function (event) {
+   if (event.key == "Enter" && check(regExCode, $('#itemCode'))) {
+       $('#itemName').focus();
+   } else {
+       $('#itemCode').focus();
+   }
+});
+
+$('#itemName').on('keydown', function (event) {
+    if (event.key == "Enter" && check(regExItemName, $('#itemName'))) {
+        $('#quantity').focus();
+    }
+});
+
+$('#quantity').on('keydown', function (event) {
+    if (event.key == "Enter" && check(regExItemQty, $('#quantity'))) {
+        $('#itemPrice').focus();
+    }
+});
+
+$('#itemPrice').on('keydown', function (event) {
+    if (event.key == "Enter" && check(regExItemQty, $('#itemPrice'))) {
+        let res = confirm("Do you want to add this item.?");
+        if(res) {
+            clearTexts();
+        }
+    }
+});
+
+function clearTexts(){
+    $('#itemCode').focus();
+    $('#itemCode,#itemName,#quantity,#itemPrice').val("");
+    checkValidity();
+}
 
 function checkValidity() {
     let errCount = 0;
