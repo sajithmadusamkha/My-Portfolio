@@ -96,6 +96,7 @@ $('#itemUpdate').click( function () {
     if(response){
         Swal.fire('Item updated Successfully');
         setTextFieldValues("","","","")
+        $("#update-itemCode").focus();
     } else {
         Swal.fire({
             icon: 'error',
