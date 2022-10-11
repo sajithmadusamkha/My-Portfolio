@@ -118,5 +118,60 @@ $("#itemCode,#itemName,#quantity,#itemPrice").on('keydown', function (event) {
     }
 });
 
+$("#itemCode,#itemName,#quantity,#itemPrice").on('keyup',function () {
+    checkValidity();
+});
 
+$("#itemCode,#itemName,#quantity,#itemPrice").on('blur',function () {
+    checkValidity();
+});
+
+function checkValidity() {
+    let errCount = 0;
+    for (let validation of itemValidations) {
+        if (check(validation.reg,validation.field)) {
+            inputSuccess(validation.field,"");
+        } else {
+            errCount += 1;
+            inputError(validation.field,validation.error)
+        }
+    }
+    setBtnState(errCount);
+}
+
+function setBtnState(val){
+    if (val > 0) {
+        $("#saveItem").attr('disabled', true);
+    } else {
+        $("#saveItem").attr('disabled', false);
+    }
+}
+
+function check(regex,textField){
+    let inputValue = textField.val();
+    return regex.test(inputValue) ? true : false;
+}
+
+function inputSuccess(textField,error) {
+    if(textField.val().length <= 0){
+        defaultText(textField,"");
+    } else {
+        textField.css('border','2px solid green');
+        textField.parent().children('span').text(error);
+    }
+}
+
+function inputError(textField,error) {
+    if (textField.val().length <= 0) {
+        defaultText(textField,"");
+    } else {
+        textField.css('border','2px solid red');
+        textField.parent().children('span').text(error);
+    }
+}
+
+function defaultText(textField,error){
+    textField.css("border","1px solid #ced4da");
+    textField.parent().children('span').text(error);
+}
 
