@@ -100,4 +100,23 @@ function loadAllCustomerForOption() {
         }
 }
 
-const itemCode = /^(I00-)[0-9]{1,3}$/;
+/* Item regular expressions */
+const regExCode = /^(I00-)[0-9]{1,3}$/;
+const regExItemName = /^[A-z 1-9]{5,20}$/;
+const regExItemQty = /^[0-9]{1,8}$/;
+const regExPrice = /^\d{0,9}(\.\d{1,4})?$/;
+
+let itemValidations = [];
+itemValidations.push({reg: regExCode, field: $('#itemCode'),error:'Item Code Pattern Is Wrong : I00-001'});
+itemValidations.push({reg: regExItemName, field: $('#itemName'),error:'Item Name Pattern Is Wrong : A-z 0-9 Ex: Naadu 5kg'});
+itemValidations.push({reg: regExItemQty, field: $('#quantity'),error:'Item Quantity Pattern Is Wrong : 0-9'});
+itemValidations.push({reg: regExPrice, field: $('#itemPrice'),error:'Item Price Pattern Is Wrong : 100 or 100.00'});
+
+$("#itemCode,#itemName,#quantity,#itemPrice").on('keydown', function (event) {
+    if (event.key == "Tab"){
+        event.preventDefault();
+    }
+});
+
+
+
