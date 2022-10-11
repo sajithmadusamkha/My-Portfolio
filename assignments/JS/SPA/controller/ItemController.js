@@ -149,10 +149,19 @@ function searchItem(itemCode) {
     return null;
 }
 
+function searchByName(itemName) {
+    for (const item of items) {
+        if(item.name == itemName){
+            return item;
+        }
+    }
+    return null;
+}
+
 function loadAllCustomerForOption() {
     $("#selectCodeForUpdate").empty();
         for (let item of items) {
-            $("#selectCodeForUpdate").append(`<option>${item.code}</option>`);
+            $("#selectCodeForUpdate").append(`<option>${item.name}</option>`);
         }
 }
 
