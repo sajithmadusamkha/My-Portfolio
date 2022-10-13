@@ -46,3 +46,33 @@ function loadAllCustomerForOption() {
         $("#selectCustomerName").append(`<option>${customer.name}</option>`)
     }
 }
+
+$('#customerSearchBtn').click(function () {
+   let id = $('#customerSearch').val();
+   let customer = searchCustomer(id);
+   if (customer != null) {
+       setCusTextField(customer.id,customer.name,customer.salary,customer.address);
+   } else {
+       Swal.fire({
+           icon: 'error',
+           title: 'Oops...',
+           text: 'There is no Customer available for that ID ' + id,
+       });
+   }
+});
+
+function searchCustomer(id){
+    for (const customer of customers) {
+        if(customer.id == id){
+            return customer;
+        }
+    }
+    return null;
+}
+
+function setCusTextField(id,name,salary,address){
+    $('#update-cusId').val(id);
+    $('#update-cusName').val(name);
+    $('#update-salary').val(salary);
+    $('#update-address').val(address);
+}
