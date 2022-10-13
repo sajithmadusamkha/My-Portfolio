@@ -56,10 +56,39 @@ $('#customerSearchBtn').click(function () {
        Swal.fire({
            icon: 'error',
            title: 'Oops...',
-           text: 'There is no Customer available for that ID ' + id,
+           text: 'There is no Customer available for that id: ' + id,
        });
    }
 });
+
+$('#deleteCustomer').click(function () {
+   let deleteId = $('#update-cusId').val();
+   let cusOption = confirm("Do you really want to delete customer id: "+deleteId);
+   if (cusOption) {
+       if(customerDelete(deleteId)) {
+           Swal.fire('Customer Successfully Deleted..');
+           setCusTextField("","","","");
+       } else {
+           Swal.fire({
+               icon: 'error',
+               title: 'Oops...',
+               text: 'No such Customer to delete. please check the Id',
+           });
+       }
+   }
+});
+
+function customerDelete(deleteCusId){
+    let customer = searchCustomer(deleteCusId);
+    if(customer != null){
+        let cusIndexNo = customers.indexOf(customer);
+        customers.splice(cusIndexNo,1);
+        loadAllCustomers();
+        return true;
+    } else {
+        return false;
+    }
+}
 
 function searchCustomer(id){
     for (const customer of customers) {

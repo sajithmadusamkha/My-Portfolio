@@ -79,12 +79,12 @@ $('#itemDelete').click(function () {
    if(option){
        if (deleteItem(deleteCode)){
            Swal.fire('Item Successfully Deleted..');
-           setTextFieldValues("","","","")
+           setTextFieldValues("","","","");
        } else {
            Swal.fire({
                icon: 'error',
                title: 'Oops...',
-               text: 'No such Item to delete. please check the code ' + code,
+               text: 'No such Item to delete. please check the code',
            });
        }
    }
