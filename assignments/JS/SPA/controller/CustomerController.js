@@ -78,12 +78,43 @@ $('#deleteCustomer').click(function () {
    }
 });
 
+$('#updateCustomer').click(function () {
+    let updateId = $('#update-cusId').val();
+    let response = customerUpdate(updateId);
+    if(response){
+        Swal.fire('Customer updated Successfully');
+        setCusTextField("","","","")
+        $("#update-cusId").focus();
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Update Failed..!',
+        });
+    }
+});
+
 function customerDelete(deleteCusId){
     let customer = searchCustomer(deleteCusId);
     if(customer != null){
         let cusIndexNo = customers.indexOf(customer);
         customers.splice(cusIndexNo,1);
         loadAllCustomers();
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function customerUpdate(id){
+    let customer = searchCustomer(id);
+    if( customer != null){
+        customer.id = $('#update-cusId').val();
+        customer.name = $('#update-cusName').val();
+        customer.salary = $('#update-salary').val();
+        customer.address = $('#update-address').val();
+        loadAllCustomers();
+        bindCusRowClick();
         return true;
     } else {
         return false;
