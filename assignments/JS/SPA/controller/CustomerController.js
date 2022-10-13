@@ -142,3 +142,5 @@ const regExId = /^(C00-)[0-9]{1,3}$/;
 const regCusName = /^[A-z ]{5,20}$/;
 const regExSalary = /^\d{0,9}(\.\d{1,4})?$/;
 const regExAddress = /^[0-9/A-z. ,]{5,}$/
+
+let customerValidations = [];
