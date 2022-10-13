@@ -11,6 +11,7 @@ $("#saveCustomer").click(function () {
     customers.push(customerObject);
     loadAllCustomers();
     bindCusRowClick();
+    loadAllCustomerForOption();
 });
 
 function loadAllCustomers() {
@@ -39,4 +40,9 @@ function bindCusRowClick() {
     });
 }
 
-
+function loadAllCustomerForOption() {
+    $("#selectCustomerName").empty();
+    for (let customer of customers) {
+        $("#selectCustomerName").append(`<option>${customer.name}</option>`)
+    }
+}

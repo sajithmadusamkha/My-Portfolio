@@ -12,7 +12,7 @@ $("#saveItem").click(function () {
 
     loadAllItems();
     bindRowClick();
-    loadAllCustomerForOption();
+    loadAllItemForOption();
     clearTexts();
 });
 
@@ -158,7 +158,7 @@ function searchByName(itemName) {
     return null;
 }
 
-function loadAllCustomerForOption() {
+function loadAllItemForOption() {
     $("#selectCodeForUpdate").empty();
         for (let item of items) {
             $("#selectCodeForUpdate").append(`<option>${item.name}</option>`);
