@@ -345,12 +345,14 @@
                                     <div class="form-group">
                                         <label>Item Code</label>
                                         <input class="form-control" id="update-itemCode" type="text">
+                                        <span class="control-error text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="col-9">
                                     <div class="form-group">
                                         <label>Item Name</label>
                                         <input class="form-control" id="update-itemName" type="text">
+                                        <span class="control-error text-danger"></span>
                                     </div>
                                 </div>
                             </div>
@@ -359,12 +361,14 @@
                                     <div class="form-group">
                                         <label>Quantity</label>
                                         <input class="form-control" id="update-quantity" min="1" type="number">
+                                        <span class="control-error text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="col-9">
                                     <div class="form-group">
                                         <label>Item Price</label>
                                         <input class="form-control" id="update-itemPrice" type="text">
+                                        <span class="control-error text-danger"></span>
                                     </div>
                                 </div>
                             </div>
@@ -439,7 +443,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 pt-4">
-                                    <button type="button" class="btn btn-warning w-100">Save Customer</button>
+                                    <button id="saveCustomer" type="button" class="btn btn-warning w-100">Save Customer</button>
                                 </div>
                             </div>
                         </form>
@@ -540,6 +544,7 @@
 
 <!-- import models -->
 <script src="model/Item.js"></script>
+<script src="model/Customer.js"></script>
 
 <!-- import Customer controller js -->
 <script src="controller/CustomerController.js"></script>
