@@ -9,9 +9,11 @@ $("#saveCustomer").click(function () {
     let customerObject = Customer(customerId,customerName,customerSalary,customerAddress);
 
     customers.push(customerObject);
+
     loadAllCustomers();
     bindCusRowClick();
     loadAllCustomerForOption();
+    loadAllCusForOrderOpt();
     clearCusTexts();
 });
 

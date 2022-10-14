@@ -130,9 +130,7 @@
                                 <div class="col-6">
                                     <div>
                                         <label>Customer ID</label>
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected></option>
-                                        </select>
+                                        <select id="orderCusOpt" class="form-select" aria-label="Default select example"></select>
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -168,9 +166,7 @@
                                 <div class="col-6">
                                     <div>
                                         <label>Item Code</label>
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected></option>
-                                        </select>
+                                        <select id="orderItemOpt" class="form-select" aria-label="Default select example"></select>
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -553,12 +549,16 @@
 <!-- import models -->
 <script src="model/Item.js"></script>
 <script src="model/Customer.js"></script>
+<script src="model/Order.js"></script>
 
 <!-- import Customer controller js -->
 <script src="controller/CustomerController.js"></script>
 
 <!-- import Item controller js -->
 <script src="controller/ItemController.js"></script>
+
+<!-- import Order controller js -->
+<script src="controller/OrderController.js"></script>
 
 </body>
 </html>

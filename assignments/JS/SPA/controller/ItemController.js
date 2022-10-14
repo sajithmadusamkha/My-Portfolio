@@ -12,6 +12,7 @@ $("#saveItem").click(function () {
 
     loadAllItems();
     bindRowClick();
+    loadAllItemForOrderOpt()
     loadAllItemForOption();
     clearTexts();
 });
