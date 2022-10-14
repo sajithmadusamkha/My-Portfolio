@@ -290,6 +290,21 @@ section {
     top: 912px;
 }
 
+.js-title {
+    top: 814px;
+    left: 614px;
+}
+
+.js {
+    left: 606px;
+    top: 852px;
+}
+
+.cal {
+    top: -70px;
+    left: 377px;
+}
+
 /*Footer Section*/
 footer {
     position: relative;
