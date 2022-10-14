@@ -1,6 +1,7 @@
 /**** Buttons ****/
 $('#orderID').attr('disabled',true);
 $('#placeOrder').attr('disabled',true);
+$('#addItemBtn').attr('disabled',true);
 $('#balance').attr('disabled',true);
 
 /**** Current Date ****/
@@ -20,6 +21,7 @@ $('#addItemBtn').click( function () {
             updatedQty();
             addToCart();
             loadAllOrders();
+            calculateTotal();
         }
     }
 });
@@ -107,9 +109,40 @@ function loadAllOrders() {
     removeItem();
 }
 function calculateTotal() {
+    let total = 0;
+    $('#tblOrder>tr').each(function () {
+       total += parseFloat($($(this).children().get(5)).text());
+       $('#total').text(total)._append('.00');
 
+       if ($('#discount').val() == "") {
+           $('#subTot').text(total);
+       }
+    });
 }
 
+$('#placeOrder').click(function () {
+
+});
+
+function saveOrder(){
+    let oId = $('#orderID').val();
+    let cusId = $('#orderCusOpt').val();
+    let date;
+
+    if($('#orderDate').val() === "") {
+
+    } else {
+        date = $('#orderDate').val();
+    }
+
+    let totalPrice = $('#total').val();
+    let newOrder = orderModel(oId,cusId,date,totalPrice);
+    let isSaved = orders.push(newOrder);
+
+    if (isSaved){
+        return true;
+    }
+}
 
 $('#orderItemOpt').change(function () {
     let code = $('#orderItemOpt').val();
