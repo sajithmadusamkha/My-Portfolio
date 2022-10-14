@@ -1,3 +1,31 @@
+$('#addItemBtn').click( function () {
+    let qtyOnHand = parseInt($('#orderQtyOnHand').val());
+    let orderQty = parseInt($('#orderQty').val());
+
+    if($('#orderQty').val() != ""){
+        if(qtyOnHand < orderQty) {
+            Swal.fire('Out of Stock!');
+        } else {
+            updateItemQty();
+        }
+    } else {
+        Swal.fire('Enter quantity...');
+    }
+});
+
+function updateItemQty(){
+    let qtyOnHand = $('#orderQtyOnHand').val();
+    let qty = $('#orderQty').val();
+    let updatedQty = qtyOnHand-qty;
+
+    for (let item of items) {
+        if($('#orderItemOpt').val() === item.code) {
+            item.quantity = updatedQty;
+            $('#orderQtyOnHand').val(item.quantity);
+            loadAllItems();
+        }
+    }
+}
 
 $('#orderItemOpt').change(function () {
     let code = $('#orderItemOpt').val();
