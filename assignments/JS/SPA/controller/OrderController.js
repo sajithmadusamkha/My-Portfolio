@@ -13,6 +13,12 @@ $('#addItemBtn').click( function () {
     }
 });
 
+function addItem() {
+    let oId = $('#orderID').val();
+    let itemCode = $('#orderItemOpt').val();
+    let itemName = $('#orderItemName').val();
+}
+
 function updateItemQty(){
     let qtyOnHand = $('#orderQtyOnHand').val();
     let qty = $('#orderQty').val();
