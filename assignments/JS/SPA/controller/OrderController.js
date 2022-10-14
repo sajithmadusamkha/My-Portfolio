@@ -1,15 +1,28 @@
-$('#orderID').attr('disabled',true);
 
-currentDate();
-generateOrderId();
+$('#orderCusOpt').change(function () {
+   let id = $('#orderCusOpt').val();
+   let customer = searchCustomer(id);
+   if(customer != null) {
+       $('#orderCusName').val(customer.name);
+       $('#orderSalary').val(customer.salary);
+       $('#orderAddress').val(customer.address);
+   }
+   console.log(id);
+});
 
 function currentDate() {
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2,'0');
-    var mm = String(today.getMonth()+1).padStart(2,'0');
-    var yyyy = today.getFullYear();
-    today = mm + '/' + dd + '/' + yyyy;
-    $("#currentOrderDate").val(today);
+    function twoDigit(num) {
+        return num.toString().padStart(2, '0');
+    }
+
+    function formatDate(date = new Date()) {
+        return [
+            date.getFullYear(),
+            twoDigit(date.getMonth() + 1),
+            twoDigit(date.getDate()),
+        ].join('-');
+    }
+    return formatDate();
 }
 
 function loadAllCusForOrderOpt() {
@@ -26,8 +39,13 @@ function loadAllItemForOrderOpt() {
     }
 }
 
+$('#orderID').attr('disabled',true);
+$('#currentOrderDate').val(currentDate());
+
+generateOrderId();
+
 function generateOrderId() {
-    if (orders.length===0){
+    if (orders.length === 0){
         $('#orderID').val('P00-001');
     } else {
         let split = orders[orders.length-1].code.split('-');
