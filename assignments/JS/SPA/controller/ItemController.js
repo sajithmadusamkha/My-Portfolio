@@ -168,7 +168,7 @@ function loadAllItemForOption() {
 
 /****** Item regular expressions ******/
 const regExCode = /^(I00-)[0-9]{1,3}$/;
-const regExItemName = /^[A-z 1-9]{5,20}$/;
+const regExItemName = /^[A-z 0-9]{5,20}$/;
 const regExItemQty = /^[0-9]{1,8}$/;
 const regExPrice = /^\d{0,9}(\.\d{1,4})?$/;
 

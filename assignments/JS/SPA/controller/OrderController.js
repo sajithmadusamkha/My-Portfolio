@@ -1,4 +1,14 @@
 
+$('#orderItemOpt').change(function () {
+    let code = $('#orderItemOpt').val();
+    let item = searchItem(code);
+    if(item != null) {
+        $('#orderItemName').val(item.name);
+        $('#orderUPrice').val(item.price);
+        $('#orderQtyOnHand').val(item.quantity);
+    }
+});
+
 $('#orderCusOpt').change(function () {
    let id = $('#orderCusOpt').val();
    let customer = searchCustomer(id);
