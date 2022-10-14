@@ -6,6 +6,6 @@ function orderDetail(orderId,orderDate,cusId,itemCode,itemName,qty,dis,total){
         code: itemCode,
         itName: itemName,
         discount: dis,
-        ttl: total
+        totalPrice: total
     }
 }

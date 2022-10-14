@@ -1,3 +1,15 @@
+/**** Buttons ****/
+$('#orderID').attr('disabled',true);
+$('#addItemBtn').attr('disabled',true);
+$('#placeOrder').attr('disabled',true);
+$('#balance').attr('disabled',true);
+
+/**** Current Date ****/
+$('#currentOrderDate').val(currentDate());
+
+/**** Order Id auto increment method ****/
+generateOrderId();
+
 $('#addItemBtn').click( function () {
     let qtyOnHand = parseInt($('#orderQtyOnHand').val());
     let orderQty = parseInt($('#orderQty').val());
@@ -7,16 +19,36 @@ $('#addItemBtn').click( function () {
             Swal.fire('Out of Stock!');
         } else {
             updateItemQty();
+            addItem();
         }
     } else {
         Swal.fire('Enter quantity...');
     }
+    $('#placeOrder').attr('disabled',false);
 });
 
 function addItem() {
     let oId = $('#orderID').val();
     let itemCode = $('#orderItemOpt').val();
     let itemName = $('#orderItemName').val();
+    let price =  $('#orderUPrice').val();
+    let qty =  $('#orderQty').val();
+    let totalPrice = price * qty;
+
+    for (const c of itemsCart) {
+        if(c.orderCItemCode == itemCode) {
+            var updateQty = +c.orderCQty + +qty;
+            let updateTotal = price * updateQty;
+            c.orderCQty = updateQty;
+            c.orderCTotal = updateTotal;
+            return;
+        }
+    }
+
+    let itemCart = orderCart(oId,itemCode,itemName,price,qty,totalPrice);
+    itemsCart.push(itemCart);
+    $("#balance,#cash,#discount").val("");
+    $('#addItemBtn').attr('disable',true);
 }
 
 function updateItemQty(){
@@ -82,11 +114,6 @@ function loadAllItemForOrderOpt() {
         $("#orderItemOpt").append(`<option>${item.code}</option>`);
     }
 }
-
-$('#orderID').attr('disabled',true);
-$('#currentOrderDate').val(currentDate());
-
-generateOrderId();
 
 function generateOrderId() {
     if (orders.length === 0){

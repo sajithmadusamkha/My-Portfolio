@@ -227,23 +227,23 @@
                         <div class="col-6">
                             <div>
                                 <label>Cash</label>
-                                <input class="form-control" id="cash" type="text">
+                                <input id="cash" class="form-control" id="cash" type="text">
                             </div>
                         </div>
                         <div class="col-6">
                             <div>
                                 <label>Discount</label>
-                                <input class="form-control" id="discount" min="0" type="number">
+                                <input id="discount" class="form-control" id="discount" min="0" type="number">
                             </div>
                         </div>
                         <div class="col-12 pt-2">
                             <div>
                                 <label>Balance</label>
-                                <input class="form-control" id="balance" type="text">
+                                <input id="balance" class="form-control" id="balance" type="text">
                             </div>
                         </div>
                         <div class="col-12" style="padding-top: 30px;">
-                            <button class="btn btn-danger w-100">Purchase</button>
+                            <button id="placeOrder" class="btn btn-danger w-100">Purchase</button>
                         </div>
                     </div>
                 </section>
@@ -254,6 +254,7 @@
         <div class="col-md-12 mt-4" style="overflow-y: scroll; height: 164px">
             <table class="table table-hover">
                 <thead class="table-warning">
+                <th scope="col">#</th>
                 <th scope="col">Item Code</th>
                 <th scope="col">Name</th>
                 <th scope="col">Quantity</th>
