@@ -85,7 +85,7 @@ $('#updateCustomer').click(function () {
     if(response){
         Swal.fire('Customer updated Successfully');
         setCusTextField("","","","")
-        $("#update-cusId").focus();
+        clearCusUpdates();
     } else {
         Swal.fire({
             icon: 'error',
@@ -173,19 +173,19 @@ $('#cusId').on('keydown', function (event) {
 });
 
 $('#cusName').on('keydown', function (event) {
-    if (event.key == "Enter" && check(regExItemName, $('#cusName'))) {
+    if (event.key == "Enter" && checkCustomer(regCusName, $('#cusName'))) {
         $('#salary').focus();
     }
 });
 
 $('#salary').on('keydown', function (event) {
-    if (event.key == "Enter" && check(regExItemName, $('#salary'))) {
+    if (event.key == "Enter" && checkCustomer(regExSalary, $('#salary'))) {
         $('#address').focus();
     }
 });
 
 $('#address').on('keydown', function (event) {
-    if (event.key == "Enter" && check(regExItemQty, $('#address'))) {
+    if (event.key == "Enter" && checkCustomer(regExAddress, $('#address'))) {
         let res = confirm("Do you want to add this customer.?");
         if(res) {
             clearCusTexts();
@@ -246,4 +246,66 @@ function clearCusTexts(){
     $('#cusId').focus();
     $('#cusId,#cusName,#salary,#address').val("");
     customerValidity();
+}
+
+/****** Customer Update ******/
+let customerValidationsForUpdate = [];
+customerValidationsForUpdate.push({reg:regExId, field: $('#update-cusId'),error:'Item Code Pattern Is Wrong : C00-001'});
+customerValidationsForUpdate.push({reg:regCusName, field: $('#update-cusName'),error:'Name Pattern Is Wrong : A-z'});
+customerValidationsForUpdate.push({reg:regExSalary, field: $('#update-salary'),error:'Salary Pattern Is Wrong : 2000 or 2000.00'});
+customerValidationsForUpdate.push({reg:regExAddress, field: $('#update-address'),error:'Address Pattern Is Wrong.'});
+
+$('#update-cusId,#update-cusName,#update-salary,#update-address').on('keyup',function () {
+    ValidityForCusUpdate();
+});
+
+$('#cusId,#cusName,#salary,#address').on('blur',function () {
+    ValidityForCusUpdate();
+});
+
+$('#update-cusId').on('keydown', function (event) {
+    if(event.key == "Enter" && checkCustomer(regExId,$('#update-cusId'))) {
+        $('#update-cusName').focus();
+    }  else {
+        $('#update-cusId').focus();
+    }
+});
+
+$('#update-cusName').on('keydown', function (event) {
+    if (event.key == "Enter" && checkCustomer(regCusName, $('#update-cusName'))) {
+        $('#update-salary').focus();
+    }
+});
+
+$('#update-salary').on('keydown', function (event) {
+    if (event.key == "Enter" && checkCustomer(regExSalary, $('#update-salary'))) {
+        $('#update-address').focus();
+    }
+});
+
+$('#update-address').on('keydown', function (event) {
+    if (event.key == "Enter" && checkCustomer(regExAddress, $('#update-address'))) {
+        let res = confirm("Do you want to add this customer.?");
+        if(res) {
+           clearCusUpdates();
+        }
+    }
+});
+
+function ValidityForCusUpdate() {
+    let errCount = 0;
+    for (let validation of customerValidationsForUpdate) {
+        if(checkCustomer(validation.reg,validation.field)) {
+            inputCusSuccess(validation.field,"");
+        } else {
+            errCount += 1;
+            inputCusError(validation.field,validation.error);
+        }
+    }
+}
+
+function clearCusUpdates(){
+    $('#update-cusId').focus();
+    $('#update-cusId,#update-cusName,#update-salary,#update-address').val("");
+    ValidityForCusUpdate();
 }
