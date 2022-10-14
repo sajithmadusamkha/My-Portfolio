@@ -10,64 +10,90 @@ $('#currentOrderDate').val(currentDate());
 generateOrderId();
 
 $('#addItemBtn').click( function () {
-    addToCart();
+    let qtyOnHand = parseInt($('#orderQtyOnHand').val());
+    let orderQty = parseInt($('#orderQty').val());
+
+    if($("#orderQty").val() != "") {
+        if(qtyOnHand < orderQty) {
+            Swal.fire('Out of stock');
+        } else {
+            updatedQty();
+            addToCart();
+        }
+    }
 });
 
+$("#cash").on('keyup',function (event) {
+    if (event.key == "Enter"){
+        event.preventDefault();
+    }
+
+    let cash = parseFloat($("#cash").val());
+    let tot = $('#total').text();
+
+    if (cach > tot) {
+        let tot = parseFloat($('#subTot').text());
+        let balance = cash - tot;
+
+        $('#balance').val(balance);
+    }
+});
+
+function removeItem(){
+    $("tblOrder>tr").on('dblclick',function () {
+       $(this).remove();
+       let totRemove = $('total').text();
+       let newVal = totRemove - parseFloat($($(this).children(this).get(5)).text());
+        $('total').text(newVal).append('.00');
+
+        $('#cash').val('');
+        $('#discount').val('');
+        $('#balance').val('');
+
+        if($('#discount').val() === ""){
+            $('#subTot').text(newVal);
+        }
+    });
+}
+
 function addToCart() {
-    let oId = $('#orderID').val();
+    let oID = $('#orderID').val();
     let itemCode = $('#orderItemOpt').val();
     let itemName = $('#orderItemName').val();
     let price =  $('#orderUPrice').val();
-    let qtyOnHand = $('#orderQtyOnHand').val();
     let qty =  $('#orderQty').val();
-    let cartItem = searchCartItem(itemCode);
+    let total = price*qty;
 
-    if(parseInt(qtyOnHand) < qty) {
-        Swal.fire('Out of Stock!');
-        return false;
-    } else if(cartItem == null) {
-        var cart = {
-            itemCode:itemCode,
-            itemName:itemName,
-            qtyOnHand:qtyOnHand,
-            price:price,
-            qty:qty,
-            totalPrice: parseFloat(price) * parseInt(qty)
-        }
-        carts.push(cart);
-    } else {
-        cartItem.qtyOnHand = cartItem.qtyOnHand - parseInt($('#orderQty').val());
-        cartItem.qty = parseInt(cartItem.qty) + parseInt($('#orderQty').val());
-    }
-    loadTable();
-    $('#placeOrder').attr('disabled',false);
-}
-
-function loadTable(){
-    $('#tblOrder').empty();
-    for(let cart of carts){
-        $('#tblOrder').append(
-            `<tr><td>${cart.itemCode}</td><td>${cart.itemName}</td><td>${cart.qty}</td><td>${cart.price}</td><td>${cart.totalPrice}</td></tr>`
-        );
-    }
-    setTotal();
-}
-
-function setTotal() {
-    let tot = 0;
-    for (let cart of carts) {
-        tot += parseFloat(cart.totalPrice);
-    }
-    $('#total').text(tot+".00");
-}
-
-function searchCartItem(code) {
-    for (let cartItem of carts) {
-        if(cartItem.code == code) {
-            return cartItem;
+    for (let c of cart){
+        if(c.code == itemCode){
+            var newQty = +c.orderCQty + +qty;
+            let newTot = price * newQty;
+            c.orderCQty = newQty;
+            c.orderCTotal = newTot;
+            return;
         }
     }
-    return null;
+
+    let cartOrder = cartModel(oID,itemCode,itemName,price,qty,total);
+    cart.push(cartOrder);
+
+    $('#balance,#cash,#discount').val("");
+
+    $('#addItemBtn').attr('disabled',true);
+}
+
+function updatedQty() {
+    let qtyOnHand = parseInt($('#orderQtyOnHand').val());
+    let orderQty = parseInt($('#orderQty').val());
+    let upQty = qtyOnHand -orderQty;
+
+    for (let item of items) {
+        if ($('#orderItemOpt').val() === item.code){
+            item.quantity = upQty;
+            $('#orderQtyOnHand').val(item.quantity);
+            loadAllItems();
+        }
+    }
 }
 
 
