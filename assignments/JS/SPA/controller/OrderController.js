@@ -19,6 +19,7 @@ $('#addItemBtn').click( function () {
         } else {
             updatedQty();
             addToCart();
+            loadAllOrders();
         }
     }
 });
@@ -94,6 +95,19 @@ function updatedQty() {
             loadAllItems();
         }
     }
+}
+
+function loadAllOrders() {
+    $('#tblOrder').empty();
+
+    for (let c of cart) {
+        var cartRow = `<tr><td>${c.orderCId}</td><td>${c.orderCItemCode}</td><td>${c.orderCItemName}</td><td>${c.orderCQty}</td><td>${c.orderCPrice}</td><td>${c.orderCTotal}</td></tr>`
+        $('#tblOrder').append(cartRow);
+    }
+    removeItem();
+}
+function calculateTotal() {
+
 }
 
 
