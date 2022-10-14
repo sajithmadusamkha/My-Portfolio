@@ -199,6 +199,7 @@
                                 </div>
                                 <div class="col-12" style="padding-top: 32px;">
                                     <button id="addItemBtn" type="button" class="btn btn-warning w-100">Add Item</button>
+
                                 </div>
                             </div>
                         </form>
@@ -213,14 +214,14 @@
                             <span class="txt-total fw-normal fs-4">Total</span>
                         </div>
                         <div class="col-6 text-end">
-                            <span class="txt-total fw-normal fs-4">5000LKR</span>
+                            <span id="total" class="txt-total fw-normal fs-4">5000LKR</span>
                         </div>
                         <div class="col-12 border w-100 mt-2"></div>
                         <div class="col-6 pt-2">
                             <span class="txt-total fw-normal fs-4">Subtotal</span>
                         </div>
                         <div class="col-6 text-end pt-2">
-                            <span class="txt-total fw-normal fs-4">450LKR</span>
+                            <span id="subTot" class="txt-total fw-normal fs-4">450LKR</span>
                         </div>
                     </div>
                     <div class="row pt-2">
@@ -254,14 +255,13 @@
         <div class="col-md-12 mt-4" style="overflow-y: scroll; height: 164px">
             <table class="table table-hover">
                 <thead class="table-warning">
-                <th scope="col">#</th>
                 <th scope="col">Item Code</th>
                 <th scope="col">Name</th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Price</th>
                 <th scope="col">Total</th>
                 </thead>
-                <tbody></tbody>
+                <tbody id="tblOrder"></tbody>
             </table>
         </div>
     </div>

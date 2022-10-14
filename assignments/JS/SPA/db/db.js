@@ -1,5 +1,4 @@
 var customers = [];
 var items = [];
 var orders = [];
-var orderDetails = [];
-var itemsCart = [];
+var carts = [];
