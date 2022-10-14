@@ -1,6 +1,16 @@
 $('#orderID').attr('disabled',true);
 
+currentDate();
 generateOrderId();
+
+function currentDate() {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2,'0');
+    var mm = String(today.getMonth()+1).padStart(2,'0');
+    var yyyy = today.getFullYear();
+    today = mm + '/' + dd + '/' + yyyy;
+    $("#currentOrderDate").val(today);
+}
 
 function loadAllCusForOrderOpt() {
     $("#orderCusOpt").empty();
