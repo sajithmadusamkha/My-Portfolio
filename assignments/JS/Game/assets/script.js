@@ -145,6 +145,9 @@ $(window).on('load',function () {
             for (let i = 0; i < this.game.ammo; i++) {
                 context.fillRect(20 + 5 * i, 50, 3 , 20);
             }
+            /*** game timer ***/
+            const formattedTime = (this.game.gameTime * 0.001).toFixed(1);
+            context.fillText('Timer: ' + formattedTime, 20, 100);
             /*** game over massage ***/
             if(this.game.gameOver) {
                 context.textAlign = 'center';
@@ -185,9 +188,11 @@ $(window).on('load',function () {
             this.score = 0;
             this.winningScore = 10;
             this.gameTime = 0;
-            this.thimeLimit = 5000;
+            this.timeLimit = 5000;
         }
         update(deltaTime) {
+            if (!this.gameOver) this.gameTime += deltaTime;
+            if (this.gameTime > this.timeLimit) this.gameOver = true;
             this.player.update();
             if(this.ammoTimer > this.ammoInerval) {
                 if(this.ammo < this.maxAmmo) this.ammo++;
@@ -206,7 +211,7 @@ $(window).on('load',function () {
                         projectTile.markForDelay = true;
                         if(enemy.lives <= 0) {
                             enemy.markForDelay = true;
-                            this.score += enemy.score;
+                            if (!this.gameOver) this.score += enemy.score;
                             if(this.score > this.winningScore) this.gameOver= true;
                         }
                     }
