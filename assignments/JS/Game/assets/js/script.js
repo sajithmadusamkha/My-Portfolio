@@ -14,6 +14,8 @@ $(window).on('load',function () {
                     this.game.keys.push(e.key);
                 } else if (e.key === ' ') {
                     this.game.player.shootTop();
+                } else if (e.key === 'd') {
+                    this.game.debug = !this.game.debug;
                 }
             });
             $(window).on('keyup', e => {
@@ -81,8 +83,7 @@ $(window).on('load',function () {
             }
         }
         draw(context) {
-            context.fillStyle = 'green';
-            context.fillRect(this.x,this.y,this.width,this.height);
+            if (this.game.debug) context.strokeRect(this.x,this.y,this.width,this.height);
             context.drawImage(this.image,this.frameX * this.width,this.frameY * this.height,this.width,this.height,
             this.x,this.y,this.width,this.height);
             this.projectiles.forEach(projectile => {
@@ -235,6 +236,7 @@ $(window).on('load',function () {
             this.gameTime = 0;
             this.timeLimit = 5000;
             this.speed = 1;
+            this.debug = true;
         }
         update(deltaTime) {
             if (!this.gameOver) this.gameTime += deltaTime;
