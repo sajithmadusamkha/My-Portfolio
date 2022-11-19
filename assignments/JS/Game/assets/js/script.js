@@ -73,6 +73,8 @@ $(window).on('load',function () {
             else if (this.game.keys.includes('ArrowDown')) this.speedY = this.maxSpeed;
             else this.speedY = 0;
             this.y += this.speedY;
+            /*** Vertical Boundaries ***/
+            if (this.y > this.game.height - this.height) this.y = this.game.height - this.height;
             /*** handle Projectiles ***/
             this.projectiles.forEach(projectile => {
                 projectile.update();
@@ -145,9 +147,11 @@ $(window).on('load',function () {
         draw(context) {
             if (this.game.debug) context.strokeRect(this.x,this.y,this.width,this.height);
             context.drawImage(this.image,this.frameX * this.width,this.frameY * this.height,
-            this.width,this.height, this.x ,this.y, this.width, this.height)
-            context.fontSize = '20px Helvatica';
-            context.fillText(this.lives, this.x, this.y);
+            this.width,this.height, this.x ,this.y, this.width, this.height);
+            if (this.game.debug) {
+                context.fontSize = '20px Helvatica';
+                context.fillText(this.lives, this.x, this.y);
+            }
         }
     }
 
@@ -236,7 +240,7 @@ $(window).on('load',function () {
         constructor(game) {
             this.game = game;
             this.fontSize = 25;
-            this.fontFamily = 'Helvetica';
+            this.fontFamily = 'Bangers';
             this.color = 'white';
         }
         draw(context) {
@@ -257,16 +261,16 @@ $(window).on('load',function () {
                 let massage1;
                 let massage2;
                 if(this.game.score > this.game.winningScore) {
-                    massage1 = 'You Win!';
+                    massage1 = 'Brilliant You Win!';
                     massage2 = 'Well done!';
                 } else {
-                    massage1 = 'You Lose!';
+                    massage1 = 'ooh You Lose!';
                     massage2 = 'Try again next time!';
                 }
-                context.font = '50px' + this.fontFamily;
-                context.fillText(massage1, this.game.width * 0.5, this.game.height * 0.5 - 30);
-                context.font = '25px' + this.fontFamily;
-                context.fillText(massage2, this.game.width * 0.5, this.game.height * 0.5 + 30);
+                context.font = '70px ' + this.fontFamily;
+                context.fillText(massage1, this.game.width * 0.5, this.game.height * 0.5 - 20);
+                context.font = '25px ' + this.fontFamily;
+                context.fillText(massage2, this.game.width * 0.5, this.game.height * 0.5 + 20);
             }
             /*** ammo ***/
             if (this.game.player.powerUp) context.fillStyle = '#ffffbd';
