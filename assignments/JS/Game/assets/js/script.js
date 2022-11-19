@@ -74,7 +74,8 @@ $(window).on('load',function () {
             else this.speedY = 0;
             this.y += this.speedY;
             /*** Vertical Boundaries ***/
-            if (this.y > this.game.height - this.height) this.y = this.game.height - this.height;
+            if (this.y > this.game.height - this.height * 0.5) this.y = this.game.height - this.height * 0.5;
+            else if (this.y < -this.height * 0.5) this.y = -this.height * 0.5;
             /*** handle Projectiles ***/
             this.projectiles.forEach(projectile => {
                 projectile.update();
@@ -303,7 +304,7 @@ $(window).on('load',function () {
             this.gameTime = 0;
             this.timeLimit = 15000;
             this.speed = 1;
-            this.debug = true;
+            this.debug = false;
         }
         update(deltaTime) {
             if (!this.gameOver) this.gameTime += deltaTime;
@@ -321,7 +322,7 @@ $(window).on('load',function () {
                 enemy.update();
                 if (this.checkCollision(this.player, enemy)) {
                     enemy.markForDelay = true;
-                    if (enemy.type = 'enemy3') this.player.enterPowerUp();
+                    if (enemy.type === 'enemy3') this.player.enterPowerUp();
                     else this.score--;
                 }
                 this.player.projectiles.forEach(projectTile => {
