@@ -35,14 +35,14 @@ $(window).on('load',function () {
             this.height = 3;
             this.speed = 3;
             this.markForDelay = false;
+            this.image = $('#projectile')[0];
         }
         update() {
             this.x += this.speed;
             if(this.x > this.game.width * 0.8) this.markForDelay = true;
         }
         draw(context) {
-            context.fillStyle = 'yellow';
-            context.fillRect(this.x,this.y,this.width,this.height);
+            context.drawImage(this.image, this.x, this.y);
         }
     }
     
@@ -99,17 +99,18 @@ $(window).on('load',function () {
         }
         draw(context) {
             if (this.game.debug) context.strokeRect(this.x,this.y,this.width,this.height);
-            context.drawImage(this.image,this.frameX * this.width,this.frameY * this.height,this.width,this.height,
-            this.x,this.y,this.width,this.height);
             this.projectiles.forEach(projectile => {
                 projectile.draw(context);
             });
+            context.drawImage(this.image,this.frameX * this.width,this.frameY * this.height,this.width,this.height,
+            this.x,this.y,this.width,this.height);
         }
         shootTop() {
             if(this.game.ammo > 0) {
                 this.projectiles.push(new ProjectTile(this.game, this.x + 80, this.y + 30));
                 this.game.ammo--;
             }
+            if (this.powerUp) this.shootButton();
         }
         enterPowerUp() {
             this.powerUpTimer = 0;
@@ -117,7 +118,9 @@ $(window).on('load',function () {
             this.game.ammo = this.game.maxAmmo;
         }
         shootButton() {
-
+            if (this.game.ammo > 0) {
+                this.projectiles.push(new ProjectTile(this.game, this.x + 80, this.y + 175));
+            }
         }
     }
     
@@ -245,10 +248,6 @@ $(window).on('load',function () {
             context.font = this.fontSize + 'px ' + this.fontFamily;
             /*** score ***/
             context.fillText('Score: '  +this.game.score, 20 , 40);
-            /*** ammo ***/
-            for (let i = 0; i < this.game.ammo; i++) {
-                context.fillRect(20 + 5 * i, 50, 3 , 20);
-            }
             /*** game timer ***/
             const formattedTime = (this.game.gameTime * 0.001).toFixed(1);
             context.fillText('Timer: ' + formattedTime, 20, 100);
@@ -268,6 +267,11 @@ $(window).on('load',function () {
                 context.fillText(massage1, this.game.width * 0.5, this.game.height * 0.5 - 30);
                 context.font = '25px' + this.fontFamily;
                 context.fillText(massage2, this.game.width * 0.5, this.game.height * 0.5 + 30);
+            }
+            /*** ammo ***/
+            if (this.game.player.powerUp) context.fillStyle = '#ffffbd';
+            for (let i = 0; i < this.game.ammo; i++) {
+                context.fillRect(20 + 5 * i, 50, 3 , 20);
             }
             context.restore();
         }

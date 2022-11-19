@@ -12,6 +12,7 @@
     background: #4d79bc;
     max-height: 100%;
     max-width: 100%;
+    font-family: 'Bangers', cursive;
 }
 
 #layer1, #layer2 , #layer3, #layer4, #player, #enemy1, #enemy2, #enemy3 {
