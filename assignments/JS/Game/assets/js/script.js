@@ -64,8 +64,11 @@ $(window).on('load',function () {
             this.maxSpeed = 3;
             this.projectiles = []
             this.image = $('#player')[0];
+            this.powerUp = false;
+            this.powerUpTimer = 0;
+            this.powerUpLimit = 10000;
         }
-        update() {
+        update(deltaTime) {
             if(this.game.keys.includes('ArrowUp')) this.speedY = -this.maxSpeed;
             else if (this.game.keys.includes('ArrowDown')) this.speedY = this.maxSpeed;
             else this.speedY = 0;
@@ -80,6 +83,18 @@ $(window).on('load',function () {
                 this.frameX++;
             } else {
                 this.frameX = 0;
+            }
+            /*** Power Up ***/
+            if (this.powerUp) {
+                if (this.powerUpTimer > this.powerUpLimit) {
+                    this.powerUpTimer = 0;
+                    this.powerUp = false;
+                    this.frameY = 0;
+                } else {
+                    this.powerUpTimer += deltaTime;
+                    this.frameY = 1;
+                    this.game.ammo += 0.1;
+                }
             }
         }
         draw(context) {
@@ -96,6 +111,14 @@ $(window).on('load',function () {
                 this.game.ammo--;
             }
         }
+        enterPowerUp() {
+            this.powerUpTimer = 0;
+            this.powerUp = true;
+            this.game.ammo = this.game.maxAmmo;
+        }
+        shootButton() {
+
+        }
     }
     
     class Enemy {
@@ -104,8 +127,6 @@ $(window).on('load',function () {
             this.x = this.game.width;
             this.speedX = Math.random() * -1.5 - 0.5;
             this.markedForDelay = false;
-            this.lives = 5;
-            this.score = this.lives;
             this.frameX = 0;
             this.frameY = 0;
             this.maxFrame = 37;
@@ -135,6 +156,35 @@ $(window).on('load',function () {
             this.y = Math.random() * (this.game.height * 0.9 - this.height);
             this.image = $('#enemy1')[0];
             this.frameY = Math.floor(Math.random() * 3);
+            this.lives = 2;
+            this.score = this.lives;
+        }
+    }
+
+    class Angler2 extends Enemy {
+        constructor(game) {
+            super(game);
+            this.width = 213;
+            this.height = 165;
+            this.y = Math.random() * (this.game.height * 0.9 - this.height);
+            this.image = $('#enemy2')[0];
+            this.frameY = Math.floor(Math.random() * 2);
+            this.lives = 3;
+            this.score = this.lives;
+        }
+    }
+
+    class Angler3 extends Enemy {
+        constructor(game) {
+            super(game);
+            this.width = 99;
+            this.height = 95;
+            this.y = Math.random() * (this.game.height * 0.9 - this.height);
+            this.image = $('#enemy3')[0];
+            this.frameY = Math.floor(Math.random() * 2);
+            this.lives = 3;
+            this.score = 15;
+            this.type = 'enemy3'
         }
     }
     
@@ -243,7 +293,7 @@ $(window).on('load',function () {
             this.score = 0;
             this.winningScore = 10;
             this.gameTime = 0;
-            this.timeLimit = 5000;
+            this.timeLimit = 15000;
             this.speed = 1;
             this.debug = true;
         }
@@ -252,7 +302,7 @@ $(window).on('load',function () {
             if (this.gameTime > this.timeLimit) this.gameOver = true;
             this.background.update();
             this.background.layer4.update();
-            this.player.update();
+            this.player.update(deltaTime);
             if(this.ammoTimer > this.ammoInerval) {
                 if(this.ammo < this.maxAmmo) this.ammo++;
                 this.ammoTimer = 0;
@@ -263,6 +313,8 @@ $(window).on('load',function () {
                 enemy.update();
                 if (this.checkCollision(this.player, enemy)) {
                     enemy.markForDelay = true;
+                    if (enemy.type = 'enemy3') this.player.enterPowerUp();
+                    else this.score--;
                 }
                 this.player.projectiles.forEach(projectTile => {
                     if (this.checkCollision(projectTile, enemy)){
@@ -294,7 +346,10 @@ $(window).on('load',function () {
             this.background.layer4.draw(context);
         }
         addEnemy() {
-            this.enemies.push(new Angler1(this));
+            const randomize = Math.random();
+            if (randomize < 0.5) this.enemies.push(new Angler1(this));
+            else if (randomize < 0.6) this.enemies.push(new Angler2(this));
+            else this.enemies.push(new Angler3(this));
         }
         checkCollision(rect1, rect2) {
             return (
