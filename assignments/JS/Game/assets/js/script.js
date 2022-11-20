@@ -118,7 +118,7 @@ $(window).on('load',function () {
         enterPowerUp() {
             this.powerUpTimer = 0;
             this.powerUp = true;
-            this.game.ammo = this.game.maxAmmo;
+            if (this.game.ammo < this.game.maxAmmo) this.game.ammo = this.game.maxAmmo;
         }
         shootButton() {
             if (this.game.ammo > 0) {
@@ -161,7 +161,7 @@ $(window).on('load',function () {
             super(game);
             this.width = 228;
             this.height = 160;
-            this.y = Math.random() * (this.game.height * 0.9 - this.height);
+            this.y = Math.random() * (this.game.height * 0.95 - this.height);
             this.image = $('#enemy1')[0];
             this.frameY = Math.floor(Math.random() * 3);
             this.lives = 2;
@@ -174,7 +174,7 @@ $(window).on('load',function () {
             super(game);
             this.width = 213;
             this.height = 165;
-            this.y = Math.random() * (this.game.height * 0.9 - this.height);
+            this.y = Math.random() * (this.game.height * 0.95 - this.height);
             this.image = $('#enemy2')[0];
             this.frameY = Math.floor(Math.random() * 2);
             this.lives = 3;
@@ -187,12 +187,28 @@ $(window).on('load',function () {
             super(game);
             this.width = 99;
             this.height = 95;
-            this.y = Math.random() * (this.game.height * 0.9 - this.height);
+            this.y = Math.random() * (this.game.height * 0.95 - this.height);
             this.image = $('#enemy3')[0];
             this.frameY = Math.floor(Math.random() * 2);
             this.lives = 3;
             this.score = 15;
             this.type = 'enemy3'
+        }
+    }
+
+    class SuperEnemy extends Enemy {
+        constructor(game) {
+            super(game);
+            this.width = 400;
+            this.height = 227;
+            this.y = Math.random() * (this.game.height * 0.95 - this.height);
+            this.image = $('#superEnemy')[0];
+            this.frameY = 0;
+            this.lives = 15;
+            this.score = this.lives;
+            this.type = 'superEnemy';
+            this.speedX = Math.random() * -1.2 - 0.2;
+            this.speedX = Math.random() * -1.2 - 0.2;
         }
     }
     
@@ -347,8 +363,8 @@ $(window).on('load',function () {
         }
         draw(context) {
             this.background.draw(context);
-            this.player.draw(context);
             this.ui.draw(context);
+            this.player.draw(context);
             this.enemies.forEach(enemy => {
                 enemy.draw(context);
             });
@@ -358,6 +374,7 @@ $(window).on('load',function () {
             const randomize = Math.random();
             if (randomize < 0.5) this.enemies.push(new Angler1(this));
             else if (randomize < 0.6) this.enemies.push(new Angler2(this));
+            else if (randomize < 0.8) this.enemies.push(new SuperEnemy(this));
             else this.enemies.push(new Angler3(this));
         }
         checkCollision(rect1, rect2) {
