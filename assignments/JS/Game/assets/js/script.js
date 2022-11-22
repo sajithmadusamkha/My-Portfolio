@@ -160,7 +160,7 @@ $(window).on('load',function () {
             this.y = Math.random() * (this.game.height * 0.95 - this.height);
             this.image = $('#enemy1')[0];
             this.frameY = Math.floor(Math.random() * 3);
-            this.lives = 2;
+            this.lives = 5;
             this.score = this.lives;
         }
     }
@@ -173,7 +173,7 @@ $(window).on('load',function () {
             this.y = Math.random() * (this.game.height * 0.95 - this.height);
             this.image = $('#enemy2')[0];
             this.frameY = Math.floor(Math.random() * 2);
-            this.lives = 3;
+            this.lives = 6;
             this.score = this.lives;
         }
     }
@@ -186,7 +186,7 @@ $(window).on('load',function () {
             this.y = Math.random() * (this.game.height * 0.95 - this.height);
             this.image = $('#enemy3')[0];
             this.frameY = Math.floor(Math.random() * 2);
-            this.lives = 3;
+            this.lives = 5;
             this.score = 15;
             this.type = 'enemy3'
         }
@@ -200,7 +200,7 @@ $(window).on('load',function () {
             this.y = Math.random() * (this.game.height * 0.95 - this.height);
             this.image = $('#superEnemy')[0];
             this.frameY = 0;
-            this.lives = 15;
+            this.lives = 20;
             this.score = this.lives;
             this.type = 'superEnemy';
             this.speedX = Math.random() * -1.2 - 0.2;
@@ -327,9 +327,9 @@ $(window).on('load',function () {
             this.ammoInerval = 500;
             this.gameOver = false;
             this.score = 0;
-            this.winningScore = 10;
+            this.winningScore = 80;
             this.gameTime = 0;
-            this.timeLimit = 15000;
+            this.timeLimit = 30000;
             this.speed = 1;
             this.debug = false;
         }
@@ -350,7 +350,7 @@ $(window).on('load',function () {
                 if (this.checkCollision(this.player, enemy)) {
                     enemy.markForDelay = true;
                     if (enemy.type === 'enemy3') this.player.enterPowerUp();
-                    else this.score--;
+                    else if (!this.gameOver) this.score--;
                 }
                 this.player.projectiles.forEach(projectTile => {
                     if (this.checkCollision(projectTile, enemy)){
@@ -365,7 +365,7 @@ $(window).on('load',function () {
                                 }
                             }
                             if (!this.gameOver) this.score += enemy.score;
-                            if(this.score > this.winningScore) this.gameOver= true;
+                            if(this.score > this.winningScore) this.gameOver = true;
                         }
                     }
                 });
@@ -391,7 +391,7 @@ $(window).on('load',function () {
             const randomize = Math.random();
             if (randomize < 0.5) this.enemies.push(new Angler1(this));
             else if (randomize < 0.6) this.enemies.push(new Angler2(this));
-            else if (randomize < 0.8) this.enemies.push(new SuperEnemy(this));
+            else if (randomize < 0.7) this.enemies.push(new SuperEnemy(this));
             else this.enemies.push(new Angler3(this));
         }
         checkCollision(rect1, rect2) {
