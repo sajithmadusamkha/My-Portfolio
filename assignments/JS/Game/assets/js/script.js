@@ -45,11 +45,7 @@ $(window).on('load',function () {
             context.drawImage(this.image, this.x, this.y);
         }
     }
-    
-    class Particle {
-        
-    }
-    
+
     class Player {
         constructor(game) {
             this.game = game;
@@ -208,7 +204,22 @@ $(window).on('load',function () {
             this.score = this.lives;
             this.type = 'superEnemy';
             this.speedX = Math.random() * -1.2 - 0.2;
-            this.speedX = Math.random() * -1.2 - 0.2;
+        }
+    }
+
+    class Enemy4 extends Enemy {
+        constructor(game, x, y) {
+            super(game);
+            this.width = 115;
+            this.height = 95;
+            this.x = x;
+            this.y = y;
+            this.image = $('#enemy4')[0];
+            this.frameY = Math.floor(Math.random() * 2);
+            this.lives = 3;
+            this.score = this.lives;
+            this.type = 'enemy4';
+            this.speedX = Math.random() * -4.2 - 0.5 ;
         }
     }
     
@@ -347,6 +358,11 @@ $(window).on('load',function () {
                         projectTile.markForDelay = true;
                         if(enemy.lives <= 0) {
                             enemy.markForDelay = true;
+                            if (enemy.type === 'superEnemy'){
+                                for (let i = 0; i < 5; i++) {
+                                    this.enemies.push(new Enemy4(this, enemy.x, enemy.y));
+                                }
+                            }
                             if (!this.gameOver) this.score += enemy.score;
                             if(this.score > this.winningScore) this.gameOver= true;
                         }
