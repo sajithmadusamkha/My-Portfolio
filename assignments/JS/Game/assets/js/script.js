@@ -360,7 +360,8 @@ $(window).on('load',function () {
                             enemy.markForDelay = true;
                             if (enemy.type === 'superEnemy'){
                                 for (let i = 0; i < 5; i++) {
-                                    this.enemies.push(new Enemy4(this, enemy.x, enemy.y));
+                                    this.enemies.push(new Enemy4(this, enemy.x + Math.random() * enemy.width,
+                                    enemy.y + Math.random() * enemy.height * 0.5 ));
                                 }
                             }
                             if (!this.gameOver) this.score += enemy.score;
