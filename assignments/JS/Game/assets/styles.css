@@ -15,6 +15,22 @@
     font-family: 'Bangers', cursive;
 }
 
-#layer1, #layer2 , #layer3, #layer4, #player, #enemy1, #enemy2, #enemy3, #projectile, #superEnemy, #enemy4 {
+#layer1, #layer2 , #layer3, #layer4, #player, #enemy1, #enemy2, #enemy3, #projectile, #superEnemy, #enemy4{
     display: none;
+}
+
+#btnReset {
+    position: absolute;
+    display: none;
+    background-color: red;
+    color: white;
+    margin: auto;
+    font-size: 22px;
+    left: 0;
+    right: 0;
+    width: 120px;
+    height: 40px;
+    bottom: 78px;
+    border: none;
+    border-radius: 5px;
 }

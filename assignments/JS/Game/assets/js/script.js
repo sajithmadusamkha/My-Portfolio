@@ -294,6 +294,10 @@ $(window).on('load',function () {
                 } else {
                     massage1 = 'ooh You Lose!';
                     massage2 = 'Try again next time!';
+                     $('#btnReset').css("display", "inline-block");
+                    $('#btnReset').click( function () {
+                       location.reload();
+                    });
                 }
                 context.font = '70px ' + this.fontFamily;
                 context.fillText(massage1, this.game.width * 0.5, this.game.height * 0.5 - 20);
