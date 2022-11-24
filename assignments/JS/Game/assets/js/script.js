@@ -291,6 +291,10 @@ $(window).on('load',function () {
                 if(this.game.score > this.game.winningScore) {
                     massage1 = 'Brilliant You Win!';
                     massage2 = 'Well done!';
+                    $('#btnReset').css("display", "inline-block");
+                    $('#btnReset').click( function () {
+                        location.reload();
+                    });
                 } else {
                     massage1 = 'ooh You Lose!';
                     massage2 = 'Try again next time!';
